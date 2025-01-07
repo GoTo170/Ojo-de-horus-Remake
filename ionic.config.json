@@ -1,0 +1,7 @@
+{
+  "name": "ojodehorusremake",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
