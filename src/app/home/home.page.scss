@@ -1,27 +1,103 @@
-#container {
-  text-align: center;
+ion-header {
+  background-color: #d4af37; /* Fondo dorado */
+  color: #000000; /* Texto negro */
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  ion-toolbar {
+    --background: transparent; /* Fondo transparente del toolbar para heredar el dorado */
+    color: #000; /* Color del texto e iconos dentro del toolbar */
+
+    ion-title,
+    ion-buttons,
+    ion-searchbar,
+    ion-button {
+      color: #000; /* Asegura que el texto e iconos sean negros */
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    ion-menu-button,
+    ion-back-button {
+      color: #000; /* Iconos del menú y back en negro */
+      background-color: #d4af37; /* Fondo dorado para los botones */
+    }
+
+    ion-searchbar {
+      --background: #ffffff; /* Fondo blanco para el cuadro de búsqueda */
+      --color: #000; /* Texto negro dentro del searchbar */
+    }
+
+    ion-button {
+      --background: #000; /* Fondo negro para el botón */
+      text-align: center;
+      border-radius: 10px; /* Bordes redondeados */
+    }
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-content {
+  background-color: #000000; /* Fondo negro */
+  color: #ffffff; /* Color blanco para el texto en el contenido */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  --background: transparent;
+
+  .welcome-section {
+    text-align: center;
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #d4af37; /* Color dorado para el título */
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  }
+
+  .welcome-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Borde redondo */
+    border: 5px solid #d4af37; /* Borde dorado */
+    margin-bottom: 20px;
+  }
+
+  .about-section {
+    h2,
+    h3 {
+      margin-bottom: 15px;
+      color: #d4af37; /* Color dorado */
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 1.5rem;
+    }
+
+    p,
+    ul {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #fff; /* Color blanco para el texto */
+      padding: 0%;
+      border: 5px solid #d4af37; /* Borde dorado */
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+  }
+
+  ion-button {
+    background-color: #d4af37; /* Fondo dorado para el botón */
+    margin-left: 30%;
+    margin-right: 30%;
+    color: #000; /* Texto negro para el botón */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
