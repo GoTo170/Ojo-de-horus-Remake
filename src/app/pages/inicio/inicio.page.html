@@ -1,15 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title></ion-title>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-
-    <!-- Barra de búsqueda fuera del ion-buttons -->
-    <ion-searchbar slot="end" placeholder="Buscar"></ion-searchbar>
-
-    <!-- Botón de inicio de sesión fuera de los botones de navegación -->
-    <ion-button slot="end" [routerDirection]="'root'" [routerLink]="'/login'">Inicio de sesión</ion-button>
+    <ion-title>Inicio</ion-title>
+    <ion-button slot=end [routerLink]="['/login']">Inicio de sesión</ion-button>
   </ion-toolbar>
 </ion-header>
 
