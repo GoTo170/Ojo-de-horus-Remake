@@ -4,15 +4,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="content">
+<div class="formuser">
+  <form>
+    <ion-item>
+      <ion-input label="NickName" label-placement="floating" placeholder="JuanGamer666" [(ngModel)]="nickname"></ion-input>
+    </ion-item>
 
-  <ion-textarea
-  label="Email"
-  error-text="Invalid email">
-</ion-textarea>
-
-  <ion-input type="password" label="Password">
-    <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-  </ion-input>
-
+    <ion-item>
+      <ion-input label="Contraseña" label-placement="floating" placeholder="contraseña" type="password" [(ngModel)]="clave"></ion-input>
+    </ion-item>
+  </form>
+</div>
+  <div class="btns">
+    <ion-button fill="outline" color="warning" [routerLink]="['/inicio']">Acceder</ion-button>
+    <ion-button fill="outline" color="light">Crear una cuenta</ion-button>
+  </div>  
 </ion-content>
