@@ -1,3 +1,20 @@
+ion-header {
+    background-color: #d4af37; /* Fondo dorado */
+    color: #000000; /* Texto negro */
+  
+    ion-toolbar {
+      --background: transparent; /* Fondo transparente del toolbar para heredar el dorado */
+      color: #000; /* Color del texto e iconos dentro del toolbar */
+  
+      ion-title,
+      ion-button {
+        color: #000; /* Asegura que el texto e iconos sean negros */
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      }
+    }
+    
+
 .formuser {
     text-align: center;
     padding-top: 10%;
@@ -13,3 +30,11 @@ form {
 ion-input{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.btns{
+    text-align: center;
+}
+
+ion-content{
+    --background: black;
+  }

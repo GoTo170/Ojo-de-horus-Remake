@@ -13,25 +13,8 @@ ion-header {
         color: #000; /* Asegura que el texto e iconos sean negros */
         font-family: Georgia, 'Times New Roman', Times, serif;
       }
-  
-      ion-menu-button,
-      ion-back-button {
-        color: #000; /* Iconos del menú y back en negro */
-        background-color: #d4af37; /* Fondo dorado para los botones */
-      }
-  
-      ion-searchbar {
-        --background: #ffffff; /* Fondo blanco para el cuadro de búsqueda */
-        --color: #000; /* Texto negro dentro del searchbar */
-      }
-  
-      ion-button {
-        --background: #000; /* Fondo negro para el botón */
-        text-align: center;
-        border-radius: 10px; /* Bordes redondeados */
       }
     }
-  }
   
   ion-content {
     background-color: #000000; /* Fondo negro */
@@ -92,12 +75,8 @@ ion-header {
       }
     }
   
-    ion-button {
-      background-color: #d4af37; /* Fondo dorado para el botón */
-      margin-left: 30%;
-      margin-right: 30%;
-      color: #000; /* Texto negro para el botón */
-      font-family: Georgia, 'Times New Roman', Times, serif;
+    .btns{
+      text-align: center;
     }
   }
   
