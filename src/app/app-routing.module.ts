@@ -40,9 +40,38 @@ const routes: Routes = [
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
+    path: 'acuerdos-legales',
+    loadChildren: () => import('./pages/acuerdos-legales/acuerdos-legales.module').then( m => m.AcuerdosLegalesPageModule)
+  },
+  {
+    path: 'comunidad',
+    loadChildren: () => import('./pages/comunidad/comunidad.module').then( m => m.ComunidadPageModule)
+  },
+  {
+    path: 'administrador',
+    loadChildren: () => import('./pages/administrador/administrador.module').then( m => m.AdministradorPageModule)
+  },
+  {
+    path: 'comentarios',
+    loadChildren: () => import('./pages/comentarios/comentarios.module').then( m => m.ComentariosPageModule)
+  },
+  {
+    path: 'politica-de-privacidad',
+    loadChildren: () => import('./pages/politica-de-privacidad/politica-de-privacidad.module').then( m => m.PoliticaDePrivacidadPageModule)
+  },
+  {
+    path: 'politica-de-usuario',
+    loadChildren: () => import('./pages/politica-de-usuario/politica-de-usuario.module').then( m => m.PoliticaDeUsuarioPageModule)
+  },
+  {
+    path: 'reportar-contenido',
+    loadChildren: () => import('./pages/reportar-contenido/reportar-contenido.module').then( m => m.ReportarContenidoPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
   },
+
 ];
 
 @NgModule({
