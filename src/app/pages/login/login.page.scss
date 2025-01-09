@@ -14,21 +14,25 @@ ion-header {
       }
     }
     
-
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  padding-top: 5%;
+  font-size: 40px;
+  color:#d4af37;
+}
 .formuser {
     text-align: center;
-    padding-top: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 
-form {
-    border-radius: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 10%;
-}
 
 ion-input{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #d4af37;
 }
 
 .btns{

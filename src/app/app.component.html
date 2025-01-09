@@ -1,3 +1,45 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="warning">
+        <ion-title>Menu principal</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="menucon">
+      <ion-list>
+        <ion-item>
+          <ion-icon name="game-controller-outline"></ion-icon>
+          <ion-label class="l1" [routerLink]="['/menu']">Menu</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="globe-outline"></ion-icon>
+          <ion-label class="l2" [routerLink]="['/comunidades']">Comunidades</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-label class="l3" [routerLink]="['/perfilusuario']">Perfil</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="construct-outline"></ion-icon>
+          <ion-label class="l4" [routerLink]="['/configuraciones']">Configuraciones</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="library-outline"></ion-icon>
+          <ion-label class="l5" [routerLink]="['/acuerdos-legales']">Acuerdos legales</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-label class="l6" [routerLink]="['/politica-de-privacidad']">Politica de privacidad</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="people-circle-outline"></ion-icon>
+          <ion-label class="l7" [routerLink]="['/politica-de-usuario']">Politica de usuario</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

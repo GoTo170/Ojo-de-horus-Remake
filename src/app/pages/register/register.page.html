@@ -5,9 +5,28 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>Formulario de registro</h1>
+
+<div class="formuser">
+    <ion-item>
+      <ion-input label="Ingrese su NickName" label-placement="floating" placeholder="nickname" [(ngModel)]="nickname"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Ingrese su Correo" label-placement="floating" placeholder="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Ingrese su Contraseña" label-placement="floating" placeholder="contraseña" type="password" [(ngModel)]="clave" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Confirme su Contraseña" label-placement="floating" placeholder="confirmacontraseña" type="password" [(ngModel)]="cclave" ></ion-input>
+    </ion-item>
+
+</div>
+  <div class="btns">
+    <ion-button fill="outline" color="warning" (click)="validarCampos()">Registrar {{ nickname }}</ion-button>
+    <ion-button fill="outline" color="dark" [routerLink]="['/login']">Cancelar</ion-button>
+  </div>  
 </ion-content>
