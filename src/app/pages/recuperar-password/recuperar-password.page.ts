@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-recuperar-password',
@@ -10,74 +9,75 @@ import { AlertController } from '@ionic/angular';
 })
 export class RecuperarPasswordPage implements OnInit {
   nickname: string = '';
+  preguntaSeguridad: string = '';
+  respuestaSeguridad: string = '';
   clave: string = '';
   confirmarClave: string = '';
 
-  constructor(private alertController: AlertController, private router: Router) { }
+  errores: { nickname: string | null; preguntaSeguridad: string | null; respuestaSeguridad: string | null; clave: string | null; confirmarClave: string | null } = {
+    nickname: null,
+    preguntaSeguridad: null,
+    respuestaSeguridad: null,
+    clave: null,
+    confirmarClave: null
+  };
 
-  // Mostrar alertas
-  async presentAlert(titulo: string, mensaje: string) {
-    const alert = await this.alertController.create({
-      header: titulo,
-      message: mensaje,
-      buttons: ['OK'],
-    });
+  constructor(private router: Router) {}
 
-    await alert.present();
-  }
-
-  // Validar los campos del formulario
   validarCampos() {
     let correcto = true;
 
-    // Validar nickname
+    // Validación de nickname
     if (this.nickname.length < 3 || this.nickname.length > 25) {
-      this.presentAlert('Error', 'El nickname debe tener entre 3 y 25 caracteres.');
+      this.errores.nickname = 'El Nickname debe tener entre 3 y 25 caracteres.';
       correcto = false;
+    } else {
+      this.errores.nickname = null;
     }
 
-    // Validar nueva contraseña
+    // Validación de pregunta de seguridad
+    if (!this.preguntaSeguridad) {
+      this.errores.preguntaSeguridad = 'Debe seleccionar una pregunta de seguridad.';
+      correcto = false;
+    } else {
+      this.errores.preguntaSeguridad = null;
+    }
+
+    // Validación de respuesta de seguridad
+    if (!this.respuestaSeguridad.trim()) {
+      this.errores.respuestaSeguridad = 'Debe ingresar la respuesta a la pregunta de seguridad.';
+      correcto = false;
+    } else {
+      this.errores.respuestaSeguridad = null;
+    }
+
+    // Validación de clave
     if (
-      this.clave.length < 8 || this.clave.length > 20 || // Longitud
-      !/[A-Z]/.test(this.clave) || // Al menos una mayúscula
-      !/\d/.test(this.clave) || // Al menos un número
-      !/[-!@#$%^&*.]/.test(this.clave) // Al menos un carácter especial
+      this.clave.length < 8 || !/[A-Z]/.test(this.clave) || !/\d/.test(this.clave) || !/[-!@#$%^&*.]/.test(this.clave)
     ) {
-      this.presentAlert(
-        'Error',
-        'La nueva contraseña debe tener entre 8 y 20 caracteres, incluir al menos una mayúscula, un número y un carácter especial.'
-      );
+      this.errores.clave = 'La contraseña debe tener al menos 8 caracteres, incluir una mayúscula, un número y un carácter especial.';
       correcto = false;
+    } else {
+      this.errores.clave = null;
     }
 
-    // Validar confirmación de la contraseña
+    // Validación de confirmación de clave
     if (this.clave !== this.confirmarClave) {
-      this.presentAlert('Error', 'Las contraseñas no coinciden.');
+      this.errores.confirmarClave = 'Las contraseñas no coinciden.';
       correcto = false;
+    } else {
+      this.errores.confirmarClave = null;
     }
 
-    if (!correcto) {
-      return;
+    // Si todo es correcto
+    if (correcto) {
+      this.router.navigate(['/login']);
     }
-
-    // Si todo está correcto, actualizar la contraseña
-    this.actualizarPassword();
-  }
-
-  // Simular actualización de la contraseña
-  actualizarPassword() {
-    // Aquí puedes integrar la lógica para actualizar la contraseña en tu base de datos
-    this.presentAlert('Éxito', 'La contraseña ha sido actualizada correctamente.');
-
-    // Redirigir al login
-    this.router.navigate(['/login']);
   }
 
   cancelar() {
-    this.router.navigate(['/login']); 
+    this.router.navigate(['/login']);
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
