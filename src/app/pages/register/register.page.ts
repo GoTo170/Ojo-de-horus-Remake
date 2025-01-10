@@ -44,9 +44,9 @@ export class RegisterPage implements OnInit {
     //para finalizar
     if(correcto){
       //si es correcto
-      this.presentAlert("Registro", "Registro completado")
+      this.presentAlert("Registro", "A registrado un nuevo usuario correctamente")
       //para redireccionar
-      this.router.navigate(['/inicio'])
+      this.router.navigate(['/login'])
     }
 
   }

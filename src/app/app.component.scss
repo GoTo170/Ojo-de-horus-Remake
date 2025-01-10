@@ -10,10 +10,19 @@ ion-title{
 
 ion-icon{
 color: #d4af37;
-padding-right: 5%;
+padding-right: 2%;
+padding-left: 2%;
+background-color: black;
+border-radius: 100%;
 }
 
 .l1, .l2, .l3, .l4, .l5, .l6, .l7{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder;
+    padding-left: 2%;
+}
+
+ion-list{
+    background-color: black;
+    padding-bottom: 93%;
 }

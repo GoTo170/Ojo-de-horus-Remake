@@ -11,28 +11,15 @@
   <form (submit)="validarFormulario($event)">
     <!-- Campo para el nombre de la comunidad -->
     <ion-item>
-      <ion-label position="floating">Nombre de la Comunidad</ion-label>
-      <ion-input 
-        type="text" 
-        [(ngModel)]="nombreComunidad" 
-        name="nombreComunidad"
-        required
-        maxlength="20"
-        (ngModelChange)="validarNombre()"
-      ></ion-input>
+      <ion-input label="Ingrese su NickName" label-placement="floating" type="text" [(ngModel)]="nombreComunidad" name="nombreComunidad" required maxlength="20"
+        (ngModelChange)="validarNombre()"></ion-input>
     </ion-item>
     <p *ngIf="errores.nombre" style="color: red; font-size: 12px;">{{ errores.nombre }}</p>
 
     <!-- Campo para la descripción -->
     <ion-item>
-      <ion-label position="floating">Descripción</ion-label>
-      <ion-textarea 
-        [(ngModel)]="descripcionComunidad" 
-        name="descripcionComunidad"
-        required
-        maxlength="250"
-        (ngModelChange)="validarDescripcion()"
-      ></ion-textarea>
+      <ion-textarea label="Ingrese su NickName" label-placement="floating" [(ngModel)]="descripcionComunidad" name="descripcionComunidad" required maxlength="250"
+        (ngModelChange)="validarDescripcion()"></ion-textarea>
     </ion-item>
     <p style="font-size: 12px;">
       Caracteres: {{ descripcionComunidad.length }}/250
@@ -42,18 +29,14 @@
     <!-- Campo para seleccionar múltiples categorías -->
     <ion-item>
       <ion-label>Categorías</ion-label>
-      <ion-select 
-        name="categorias" 
-        [(ngModel)]="categoriasSeleccionadas" 
-        multiple="true" 
-        placeholder="Seleccionar categorías"
-      >
-        <ion-select-option value="fps">First Person Shooter</ion-select-option>
-        <ion-select-option value="guerra">De Guerra</ion-select-option>
-        <ion-select-option value="cocina">De Cocina</ion-select-option>
-        <ion-select-option value="aventura">De Aventura</ion-select-option>
-        <ion-select-option value="rol">De Rol</ion-select-option>
-        <ion-select-option value="deportes">De Deportes</ion-select-option>
+      <ion-select name="categorias" [(ngModel)]="categoriasSeleccionadas" multiple="true"
+        placeholder="Seleccionar categorías">
+        <ion-select-option value="fps">Shooter primera persona</ion-select-option>
+        <ion-select-option value="guerra">Accion</ion-select-option>
+        <ion-select-option value="cocina">Cocina</ion-select-option>
+        <ion-select-option value="aventura">Aventura</ion-select-option>
+        <ion-select-option value="rol">Rol</ion-select-option>
+        <ion-select-option value="deportes">Deportes</ion-select-option>
         <ion-select-option value="otros">Otros</ion-select-option>
       </ion-select>
     </ion-item>
@@ -65,7 +48,6 @@
         <img src="assets/icon/camera.png" alt="Agregar imagen" style="width: 50px; height: 50px;" />
         <p>Subir Imagen</p>
       </label>
-      <input id="imagen" type="file" accept="image/*" name="imagen" hidden />
     </ion-item>
 
     <!-- Botón para enviar el formulario y cancelar -->
