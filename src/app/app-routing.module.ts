@@ -76,9 +76,22 @@ const routes: Routes = [
     loadChildren: () => import('./pages/editarperfil/editarperfil.module').then( m => m.EditarperfilPageModule)
   },
   {
+    path: 'seguridad',
+    loadChildren: () => import('./pages/seguridad/seguridad.module').then( m => m.SeguridadPageModule)
+  },
+  {
+    path: 'cambiar-password',
+    loadChildren: () => import('./pages/cambiar-password/cambiar-password.module').then( m => m.CambiarPasswordPageModule)
+  },
+  {
+    path: 'recuperar-password',
+    loadChildren: () => import('./pages/recuperar-password/recuperar-password.module').then( m => m.RecuperarPasswordPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
   },
+
 
 
 
