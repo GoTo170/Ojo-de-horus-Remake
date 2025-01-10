@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -10,11 +10,12 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
-  nickname:string="";
-  clave:string="";
+  nickname: string = "";
+  clave: string = "";
 
   constructor(private alertController: AlertController, private router: Router) { }
-  async presentAlert(titulo:string, mensaje:string) { //agrega parametros para que no haya que hacer cada una de las alertas y solo tengamos una para todas
+
+  async presentAlert(titulo: string, mensaje: string) {
     const alert = await this.alertController.create({
       header: titulo,
       message: mensaje,
@@ -24,31 +25,45 @@ export class LoginPage implements OnInit {
     await alert.present();
   }
 
-  //funcion para validacion de nick
-  validarCampos(){
+  //funcion para la validacion del nick
+  validarCampos() {
     let correcto = true;
 
-    //validacion largo nick
-    if(this.nickname.length < 3 || this.nickname.length > 25 || this.clave.length < 8 || this.clave.length > 20){
-      //msj html (investigar)
-
-      //msj alerta
-      this.presentAlert("Error", "El nick o la clave son incorrectos");
-
-      //cambio bandera
+    // Validación de nickname
+    if (this.nickname.length < 3 || this.nickname.length > 25) {
       correcto = false;
     }
 
-    //para finalizar
-    if(correcto){
-      //si es correcto
-      this.presentAlert("Correcto", "Inicio sesion correctamente")
-      //para redireccionar
-      this.router.navigate(['/inicio'])
+    // Validación de clave
+    if (
+      this.clave.length < 8 || this.clave.length > 20 || // Longitud de la clave
+      !/[A-Z]/.test(this.clave) || // que la clave contenga al menos una mayuscula
+      !/\d/.test(this.clave) ||    // que la clave contenga al menos un número
+      !/[-!@#$%^&*.]/.test(this.clave) // que la clave contenga al menos un carácter especial
+    ) {
+      correcto = false;
     }
 
-  }
-  ngOnInit() {
+    // Mostrar alerta si algo está mal
+    if (!correcto) {
+      this.presentAlert("Error", "El nickname o la clave son incorrectos.");
+      return;
+    }
+
+    // Si todo es correcto
+    this.presentAlert("Correcto", "Inicio de sesión correctamente.");
+
+    // Creando un diccionario de datos para enviar a inicio
+    let navigationextras: NavigationExtras = {
+      state: {
+        nick: this.nickname
+      }
+    };
+
+    // Redireccionar
+    this.router.navigate(['/inicio'], navigationextras);
   }
 
+  ngOnInit() {
+  }
 }

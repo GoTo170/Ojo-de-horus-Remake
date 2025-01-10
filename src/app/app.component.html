@@ -9,33 +9,39 @@
 
     <ion-content class="menucon">
       <ion-list>
-        <ion-item>
+        <ion-item [routerLink]="['/menu']">
           <ion-icon name="game-controller-outline"></ion-icon>
-          <ion-label class="l1" [routerLink]="['/menu']">Menu</ion-label>
+          <ion-label class="l1" >Menu</ion-label>
         </ion-item>
-        <ion-item>
+        
+        <ion-item [routerLink]="['/comunidades']">
           <ion-icon name="globe-outline"></ion-icon>
-          <ion-label class="l2" [routerLink]="['/comunidades']">Comunidades</ion-label>
+          <ion-label class="l2" >Comunidades</ion-label>
         </ion-item>
-        <ion-item>
+
+        <ion-item [routerLink]="['/perfilusuario']">
           <ion-icon name="person-outline"></ion-icon>
-          <ion-label class="l3" [routerLink]="['/perfilusuario']">Perfil</ion-label>
+          <ion-label class="l3" >Perfil</ion-label>
         </ion-item>
-        <ion-item>
+
+        <ion-item [routerLink]="['/configuraciones']">
           <ion-icon name="construct-outline"></ion-icon>
-          <ion-label class="l4" [routerLink]="['/configuraciones']">Configuraciones</ion-label>
+          <ion-label class="l4" >Configuraciones</ion-label>
         </ion-item>
-        <ion-item>
+
+        <ion-item [routerLink]="['/acuerdos-legales']">
           <ion-icon name="library-outline"></ion-icon>
-          <ion-label class="l5" [routerLink]="['/acuerdos-legales']">Acuerdos legales</ion-label>
+          <ion-label class="l5" >Acuerdos legales</ion-label>
         </ion-item>
-        <ion-item>
+
+        <ion-item [routerLink]="['/politica-de-privacidad']">
           <ion-icon name="lock-closed-outline"></ion-icon>
-          <ion-label class="l6" [routerLink]="['/politica-de-privacidad']">Politica de privacidad</ion-label>
+          <ion-label class="l6" >Politica de privacidad</ion-label>
         </ion-item>
-        <ion-item>
+
+        <ion-item [routerLink]="['/politica-de-usuario']">
           <ion-icon name="people-circle-outline"></ion-icon>
-          <ion-label class="l7" [routerLink]="['/politica-de-usuario']">Politica de usuario</ion-label>
+          <ion-label class="l7" >Politica de usuario</ion-label>
         </ion-item>
       </ion-list>
     </ion-content>

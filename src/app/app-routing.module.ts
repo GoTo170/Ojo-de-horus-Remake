@@ -68,9 +68,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/reportar-contenido/reportar-contenido.module').then( m => m.ReportarContenidoPageModule)
   },
   {
+    path: 'crearcomunidad',
+    loadChildren: () => import('./pages/crearcomunidad/crearcomunidad.module').then( m => m.CrearcomunidadPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
   },
+
 
 ];
 
