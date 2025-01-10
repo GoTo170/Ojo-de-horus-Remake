@@ -5,9 +5,49 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">perfilusuario</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card-header>
+    <ion-item lines="none">
+      <ion-label>
+        <h2>Nick para mas adelante</h2>
+      </ion-label>
+      
+      <!-- Botón de editar perfil -->
+        <ion-button fill="outline" color="warning" slot="end" [routerLink]="['/editarperfil']">
+          <ion-icon color="warning" name="pencil"></ion-icon>
+        </ion-button>
+
+    </ion-item>
+  </ion-card-header>
+
+  <div class="content-wrapper">
+    <ion-card class="cardperfil">
+
+      <ion-card-content>
+        <!-- Nombre -->
+        <ion-item >
+          <ion-label>Nombre</ion-label>
+        </ion-item>
+
+        <!-- Apellido -->
+        <ion-item>
+          <ion-label>Apellido</ion-label>
+        </ion-item>
+
+        <!-- Correo Electrónico -->
+        <ion-item>
+          <ion-label>Correo Electrónico</ion-label>
+        </ion-item>
+
+        <!-- Teléfono -->
+        <ion-item>
+          <ion-label>Teléfono</ion-label>
+        </ion-item>
+
+        <!-- Dirección -->
+        <ion-item>
+          <ion-label>Dirección</ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
