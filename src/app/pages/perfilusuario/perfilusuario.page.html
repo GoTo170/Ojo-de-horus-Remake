@@ -1,19 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> 
+    </ion-buttons>
     <ion-title>perfilusuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card-header>
-    <ion-item lines="none">
+
+  <ion-card-header class="card-header">
+    <div class="foto">
+      <ion-icon color="white" name="person-circle-outline"></ion-icon>
+      </div>
+
+    <ion-item class="cabe" lines="none">
       <ion-label>
-        <h2>Nick para mas adelante</h2>
+        <h2 class="nombre">Diego</h2>
       </ion-label>
       
       <!-- Botón de editar perfil -->
-        <ion-button fill="outline" color="warning" slot="end" [routerLink]="['/editarperfil']">
-          <ion-icon color="warning" name="pencil"></ion-icon>
+        <ion-button fill="outline" color="dark" slot="end" [routerLink]="['/editarperfil']">
+          <ion-icon color="black" name="pencil"></ion-icon>
         </ion-button>
 
     </ion-item>
@@ -25,27 +33,22 @@
       <ion-card-content>
         <!-- Nombre -->
         <ion-item >
-          <ion-label>Nombre</ion-label>
-        </ion-item>
-
-        <!-- Apellido -->
-        <ion-item>
-          <ion-label>Apellido</ion-label>
+          <ion-label class="d1">Diego Mellado</ion-label>
         </ion-item>
 
         <!-- Correo Electrónico -->
         <ion-item>
-          <ion-label>Correo Electrónico</ion-label>
+          <ion-label class="d2">Diego&#64;example.com</ion-label>
         </ion-item>
 
         <!-- Teléfono -->
         <ion-item>
-          <ion-label>Teléfono</ion-label>
+          <ion-label class="d3">+56 9 4534 4532</ion-label>
         </ion-item>
 
         <!-- Dirección -->
         <ion-item>
-          <ion-label>Dirección</ion-label>
+          <ion-label class="d4">Mi casa</ion-label>
         </ion-item>
       </ion-card-content>
     </ion-card>
