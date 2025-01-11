@@ -1,13 +1,56 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> 
+    </ion-buttons>
     <ion-title>editarperfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">editarperfil</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <ion-card-header class="card-header">
+    <div class="foto">
+      <ion-icon color="white" name="person-circle-outline"></ion-icon>
+      </div>
+
+    <ion-item class="cabe" lines="none">
+      <ion-label>
+        <h2 class="nombre">Diego</h2>
+      </ion-label>
+
+    </ion-item>
+  </ion-card-header>
+
+  <div class="content-wrapper">
+    <ion-card class="cardperfil">
+
+      <ion-card-content>
+        <!-- Nombre -->
+        <ion-item >
+          <ion-input class="d1" placeholder="Nombre"></ion-input>
+        </ion-item>
+
+        <!-- Correo Electrónico -->
+        <ion-item>
+          <ion-input class="d2" placeholder="Correo"></ion-input>
+        </ion-item>
+
+        <!-- Teléfono -->
+        <ion-item>
+          <ion-input class="d3" placeholder="Telefono"></ion-input>
+        </ion-item>
+
+        <!-- Dirección -->
+        <ion-item>
+          <ion-input class="d4" placeholder="Direccion"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="btns">
+      <ion-button fill="outline" color="warning" [routerLink]="['/perfilusuario']" >Guardar</ion-button>
+      <ion-button fill="outline" color="light" [routerLink]="['/perfilusuario']">Cancelar</ion-button>
+    </div>
+  </div>
 </ion-content>
