@@ -81,3 +81,20 @@ ion-card-header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
 }
+
+.btn-3puntos {
+  position: absolute; 
+  top: 8px; 
+  right: 8px; 
+  padding: 0;
+  height: auto;
+  width: auto;
+  margin-bottom: 10%;
+  
+  img {
+    height: 35px; 
+    width: 35px;
+    border: none; 
+    border-radius: 0; 
+  }
+}
