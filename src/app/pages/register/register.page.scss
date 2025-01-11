@@ -19,7 +19,7 @@ h1{
   text-align: center;
   padding-top: 5%;
   font-size: 40px;
-  color:#d4af37;
+  color:#d4af37; 
 }
 .formuser {
     text-align: center;
@@ -41,4 +41,17 @@ ion-input{
 
 ion-content{
     --background: black;
+  }
+
+  p.error {
+    color: red;
+    font-size: 14px;
+    margin: 5px 0 10px;
+    text-align: left;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
   }
