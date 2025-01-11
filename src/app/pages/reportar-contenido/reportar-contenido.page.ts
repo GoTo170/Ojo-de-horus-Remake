@@ -32,7 +32,7 @@ export class ReportarContenidoPage implements OnInit {
   ngOnInit() {}
 
   async enviarReporte() {
-    if (!this.selectedMotivo) {
+    if (this.selectedMotivo) {
       await this.presentAlert('Error', 'Por favor selecciona un motivo para el reporte.');
       return;
     }
