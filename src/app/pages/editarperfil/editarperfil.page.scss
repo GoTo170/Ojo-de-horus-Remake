@@ -1,55 +1,112 @@
 ion-header {
-    background-color: #d4af37; /* Fondo dorado */
-    color: #000000; /* Texto negro */
-  
-    ion-toolbar {
-      --background: transparent; /* Fondo transparente del toolbar para heredar el dorado */
-      color: #000; /* Color del texto e iconos dentro del toolbar */
-  
-      ion-title,
-      ion-buttons,
-      ion-searchbar,
-      ion-button {
-        color: #000; /* Asegura que el texto e iconos sean negros */
-        font-family: Georgia, 'Times New Roman', Times, serif;
-      }
-      }
-    }
+  background-color: #d4af37; 
+  color: #000000; 
 
-ion-content{
-    --background: null;
-    background-color: black;
+  ion-toolbar {
+    --background: transparent; 
+    color: #000; 
+
+    ion-title,
+    ion-button {
+      color: #000; 
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  }
 }
 
-/* Contenedor que contiene la foto y el encabezado */
+ion-content {
+  --background: black; 
+  background-color: black;
+}
+
+/* Estilo de encabezado principal */
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  padding-top: 5%;
+  font-size: 40px;
+  color: #d4af37; 
+}
+
+/* Contenedor para la foto de perfil o logo */
+.logo-container,
 .perfil-container {
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  flex-direction: column; /* Coloca los elementos en columna */
-  margin-top: 20px; /* Espaciado superior */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000; 
+  padding-top: 5%;
 }
 
+.logo-img,
 .foto {
-  font-size: 100px; /* Tamaño del icono */
-  width: 100px; /* Ancho del icono */
-  height: 100px; /* Altura del icono */
-  color: white; /* Color del icono */
-  display: flex; /* Flexbox para centrar el contenido */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  border-radius: 50%; /* Hace que el fondo sea redondeado */
-  background-color: #333; /* Fondo oscuro */
-  margin: 20px;
-  margin-left: 38%;
-
+  width: 150px; 
+  height: auto;
+  border-radius: 50%;
+  background-color: #333; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px; 
+  margin: 20px auto; 
 }
 
-.nombre{
-    text-align: center;
-    font-size: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
+/* Estilo de nombres y títulos */
+.nombre {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+/* Contenedor de formularios */
+.formuser {
+  text-align: center;
+  padding: 5% 15%; 
+  margin-bottom: 10px;
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+ion-input {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: start;
+}
+
+/* Mensajes de error */
+p.error {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0 10px;
+  text-align: left;
+}
+
+/* Contenedor de botones */
+.btns {
+  text-align: center;
+  padding-top: 10px;
+
+  ion-button {
+    margin: 5px; 
+  }
+}
+
+/* Tarjeta de perfil */
+.cardperfil {
+  border: 2px solid #d4af37; 
+  border-radius: 10px;
+  margin: 10px auto; 
+  padding: 20px; 
+}
+
+/* Encabezado de tarjetas */
+ion-card-header {
+  padding: 0;
+  width: 100%;
 }
 
 .card-header {
@@ -59,30 +116,11 @@ ion-content{
   width: 100%;
 }
 
-.cabe{
-    --background: none;
-    background-color: #d4af37;
-}
-
-
-ion-card-header {
-  padding: 0; /* Elimina el padding extra */
-  width: 100%; /* Asegura que el header ocupe todo el ancho disponible */
-}
-
-.cardperfil {
-  border: 2px solid #d4af37; /* Borde dorado */
-  border-radius: 10px; /* Bordes redondeados */
-  margin: 10px; /* Espacio exterior */
-  padding: 20px; /* Espacio interior */
-}
-
-.d1, .d2, .d3, .d4{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-}
-
-.btns{
-    padding-top: 10px;
-    text-align: center;
+/* Otros textos */
+.d1,
+.d2,
+.d3,
+.d4 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
 }
