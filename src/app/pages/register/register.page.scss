@@ -39,12 +39,15 @@ h1{
     padding-bottom: 5%;
     margin-left: 15%;
     margin-right: 15%;
+    margin-bottom: 10px;
   }
 
 
 ion-input{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #d4af37;
+    border: 2px solid #d4af37;
+    text-align: start;
 }
 
 .btns{
@@ -65,6 +68,10 @@ ion-content{
   .error-message {
     color: red;
     font-size: 12px;
-    margin-top: 4px;
     text-align: left;
+    margin-top: 5px;
+  }
+
+  .input-container {
+    margin-bottom: 15px; 
   }
