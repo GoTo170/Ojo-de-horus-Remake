@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crearcomunidad',
@@ -34,12 +34,13 @@ export class CrearcomunidadPage implements OnInit {
     } else {
       this.errores.nombre = null;
     }
-
   }
 
   // Validación del campo "Descripción"
   validarDescripcion() {
-    if (this.descripcionComunidad.length > 250) {
+    if (!this.descripcionComunidad || this.descripcionComunidad.trim().length < 1) {
+      this.errores.descripcion = 'La descripción no puede estar vacía.';
+    } else if (this.descripcionComunidad.length > 250) {
       this.errores.descripcion = 'La descripción no puede superar los 250 caracteres.';
     } else {
       this.errores.descripcion = null;
@@ -55,8 +56,8 @@ export class CrearcomunidadPage implements OnInit {
     }
   }
 
-   // Función para cancelar y redirigir
-   cancelar() {
+  // Función para cancelar y redirigir
+  cancelar() {
     this.router.navigate(['/comunidades']); // Redirige a la página comunidad
   }
 
@@ -80,5 +81,13 @@ export class CrearcomunidadPage implements OnInit {
       descripcion: this.descripcionComunidad,
       categorias: this.categoriasSeleccionadas,
     });
+
+    // Redirigir a la página de comunidades si todo es válido
+    this.router.navigate(['/comunidades']);
+  }
+
+  // Verificar si el formulario es válido
+  formValido(): boolean {
+    return !(this.errores.nombre || this.errores.descripcion || this.errores.categorias);
   }
 }

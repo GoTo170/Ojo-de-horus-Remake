@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';  // Importar Router
+import { Router } from '@angular/router'; // Importar Router
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -12,40 +12,65 @@ export class CambiarPasswordPage implements OnInit {
   preguntaSeguridad: string = '';
   clave: string = '';
   confirmarClave: string = '';
+  
+  // Objeto para manejar los mensajes de error
+  errores: { preguntaSeguridad: string | null; clave: string | null; confirmarClave: string | null } = {
+    preguntaSeguridad: null,
+    clave: null,
+    confirmarClave: null
+  };
 
-  constructor(private alertController: AlertController, private router: Router) { }  // Inyectar Router
+  constructor(private alertController: AlertController, private router: Router) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   cambiarContrasena() {
-    // Verificar si la pregunta de seguridad y las contraseñas son válidas
+    this.limpiarErrores(); // Limpiar los errores previos antes de validar
+
+    let valido = true;
+
+    // Validación de la pregunta de seguridad
     if (!this.preguntaSeguridad) {
-      alert('La pregunta de seguridad es requerida');
-      return;
+      this.errores.preguntaSeguridad = 'La pregunta de seguridad es requerida';
+      valido = false;
     }
 
+    // Validación de la contraseña
     if (this.clave !== this.confirmarClave) {
-      alert('Las contraseñas no coinciden');
-      return;
+      this.errores.clave = 'Las contraseñas no coinciden';
+      this.errores.confirmarClave = 'Las contraseñas no coinciden';
+      valido = false;
     }
 
-    // Validaciones de la contraseña
-    if (
-      this.clave.length < 8 ||
-      this.clave.length > 20 ||
-      !/[A-Z]/.test(this.clave) ||
-      !/\d/.test(this.clave) ||
-      !/[-!@#$%^&*.]/.test(this.clave)
-    ) {
-      alert(
-        'La contraseña debe tener entre 8 y 20 caracteres, contener al menos una mayúscula, un número y un carácter especial.'
-      );
-      return;
+    // Validaciones adicionales de la contraseña
+    if (this.clave.length < 8 || this.clave.length > 20) {
+      this.errores.clave = 'La contraseña debe tener entre 8 y 20 caracteres';
+      valido = false;
+    }
+    if (!/[A-Z]/.test(this.clave)) {
+      this.errores.clave = 'La contraseña debe contener al menos una mayúscula';
+      valido = false;
+    }
+    if (!/\d/.test(this.clave)) {
+      this.errores.clave = 'La contraseña debe contener al menos un número';
+      valido = false;
+    }
+    if (!/[-!@#$%^&*.]/.test(this.clave)) {
+      this.errores.clave = 'La contraseña debe contener al menos un carácter especial';
+      valido = false;
     }
 
-    // Si todo está correcto, redirigir al login
-    this.router.navigate(['/login']);
+    if (valido) {
+      // Si todo es correcto, redirigir al login
+      this.router.navigate(['/login']);
+    }
+  }
+
+  limpiarErrores() {
+    // Limpiar los mensajes de error
+    this.errores.preguntaSeguridad = null;
+    this.errores.clave = null;
+    this.errores.confirmarClave = null;
   }
 
   async mostrarMensaje() {
@@ -57,5 +82,4 @@ export class CambiarPasswordPage implements OnInit {
 
     await alert.present();
   }
-
 }
