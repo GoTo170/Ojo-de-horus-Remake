@@ -12,12 +12,14 @@ export class CambiarPasswordPage implements OnInit {
   preguntaSeguridad: string = '';
   clave: string = '';
   confirmarClave: string = '';
-  
+  respuestaSeguridad: string = '';  
+
   // Objeto para manejar los mensajes de error
-  errores: { preguntaSeguridad: string | null; clave: string | null; confirmarClave: string | null } = {
+  errores: { preguntaSeguridad: string | null; clave: string | null; confirmarClave: string | null; respuestaSeguridad: string | null } = {
     preguntaSeguridad: null,
     clave: null,
-    confirmarClave: null
+    confirmarClave: null,
+    respuestaSeguridad: null 
   };
 
   constructor(private alertController: AlertController, private router: Router) {}
@@ -32,6 +34,12 @@ export class CambiarPasswordPage implements OnInit {
     // Validación de la pregunta de seguridad
     if (!this.preguntaSeguridad) {
       this.errores.preguntaSeguridad = 'La pregunta de seguridad es requerida';
+      valido = false;
+    }
+
+    // Validación de la respuesta de la pregunta de seguridad
+    if (!this.respuestaSeguridad) {
+      this.errores.respuestaSeguridad = 'La respuesta es requerida';
       valido = false;
     }
 
@@ -71,6 +79,7 @@ export class CambiarPasswordPage implements OnInit {
     this.errores.preguntaSeguridad = null;
     this.errores.clave = null;
     this.errores.confirmarClave = null;
+    this.errores.respuestaSeguridad = null;  
   }
 
   async mostrarMensaje() {
