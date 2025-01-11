@@ -11,19 +11,25 @@
 <ion-content class="content" [fullscreen]="true">
 
   <ion-card class="card-custom">
-    <ion-card-title>
-      <h1>Nombre del usuario</h1>
-    </ion-card-title>
-    <p>Este es un ejemplo de mensaje.</p>
+    <div>
+    <ion-button fill="clear" [routerLink]="['/reportar-contenido']" class="btn-3puntos">
+      <img  src="assets/icon/3puntos.png" alt="Reportar contenido"  />
+    </ion-button>
+   </div>
+      <ion-card-title>
+        <h1 [routerLink]="['/perfiles']">Nombre del usuario</h1>
+      </ion-card-title>
+      <p>Este es un ejemplo de mensaje.</p>
 
-  <ion-card-content>
-    <img src="assets/img/forza.jpg" alt="Publicación de usuario" style="width: 100%; margin-bottom: 8px;">
-    
-    <div class="btnpost">
-      <ion-button fill="outline" color="warning">Me Gusta</ion-button>
-    </div>
-  </ion-card-content>
-</ion-card>
+    <ion-card-content>
+      <img src="assets/img/forza.jpg" alt="Publicación de usuario" style="width: 100%; margin-bottom: 8px;">
+      
+      <div class="btnpost">
+        <ion-button fill="outline" color="warning">Me Gusta</ion-button>
+        </div>
+
+    </ion-card-content>
+  </ion-card>
 
 
 <h1>Comentarios</h1>
@@ -33,7 +39,7 @@
   <ion-button fill="clear" [routerLink]="['/reportar-contenido']" class="btn-3puntos">
     <img src="assets/icon/3puntos.png" alt="Reportar contenido" />
   </ion-button>
-  <ion-title>Usuario_extra</ion-title>
+  <ion-title [routerLink]="['/perfiles']">Usuario_extra</ion-title>
   <p>este mensaje es de prueba</p>
 </ion-card>
 
@@ -41,7 +47,7 @@
   <ion-button fill="clear" [routerLink]="['/reportar-contenido']" class="btn-3puntos">
     <img src="assets/icon/3puntos.png" alt="Reportar contenido" />
   </ion-button>
-  <ion-title>Usuario_extra2</ion-title>
+  <ion-title [routerLink]="['/perfiles']">Usuario_extra2</ion-title>
   <p>Yo creo sinceramente que estos alumnos se ganaron un 7 profe</p>
 </ion-card>
 
@@ -49,7 +55,7 @@
   <ion-button fill="clear" [routerLink]="['/reportar-contenido']" class="btn-3puntos">
     <img src="assets/icon/3puntos.png" alt="Reportar contenido" />
   </ion-button>
-  <ion-title>Usuario_extra3</ion-title>
+  <ion-title [routerLink]="['/perfiles']">Usuario_extra3</ion-title>
   <p>Estoy de acuerdo con el usuario extra 2 profe, 7 y aprueban esta materia</p>
 </ion-card>
 
@@ -57,7 +63,7 @@
 
 <ion-footer>
   <ion-item class="com">
-    <ion-input placeholder="Comentario"></ion-input>
-    <ion-button fill="outline" color="warning">Enviar</ion-button>
+    <ion-input class="tucom" placeholder="Comentario"></ion-input>
+    <ion-button size="" fill="outline" color="warning">Enviar</ion-button>
   </ion-item>
 </ion-footer>
