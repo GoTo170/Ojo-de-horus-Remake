@@ -29,36 +29,39 @@ h1 {
 }
 
 /* Contenedor para la foto de perfil o logo */
-.logo-container,
 .perfil-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #000; 
-  padding-top: 5%;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  flex-direction: column; /* Coloca los elementos en columna */
+  margin-top: 20px; /* Espaciado superior */
 }
 
-.logo-img,
 .foto {
-  width: 150px; 
-  height: auto;
-  border-radius: 50%;
-  background-color: #333; 
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 100px; 
-  margin: 20px auto; 
+  font-size: 100px; /* Tamaño del icono */
+  width: 100px; /* Ancho del icono */
+  height: 100px; /* Altura del icono */
+  color: white; /* Color del icono */
+  display: flex; /* Flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  border-radius: 50%; /* Hace que el fondo sea redondeado */
+  background-color: #333; /* Fondo oscuro */
+  margin: 20px;
+  margin-left: 38%;
 }
 
 /* Estilo de nombres y títulos */
-.nombre {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.nombre{
   text-align: center;
   font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: black;
+}
+
+.cabe{
+  --background: none;
+  background-color: #d4af37;
 }
 
 /* Contenedor de formularios */
@@ -83,6 +86,7 @@ p.error {
   font-size: 14px;
   margin: 5px 0 10px;
   text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Contenedor de botones */

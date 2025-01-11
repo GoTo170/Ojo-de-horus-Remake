@@ -22,7 +22,20 @@ border-radius: 100%;
     padding-left: 2%;
 }
 
-ion-list{
+.menucon{
+    --background: none;
     background-color: black;
-    padding-bottom: 100%;
+}
+
+ion-item{
+    --background: none;
+    background-color: black;
+    border: 2px solid #d4af37; /* Borde dorado */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+ion-list{
+    --background: none;
+    background-color: black;
+    padding: 5px;
 }
