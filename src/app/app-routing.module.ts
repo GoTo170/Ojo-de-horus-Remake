@@ -88,12 +88,21 @@ const routes: Routes = [
     loadChildren: () => import('./pages/recuperar-password/recuperar-password.module').then( m => m.RecuperarPasswordPageModule)
   },
   {
+    path: 'usuariosbaneados',
+    loadChildren: () => import('./pages/usuariosbaneados/usuariosbaneados.module').then( m => m.UsuariosbaneadosPageModule)
+  },
+  {
+    path: 'postreportados',
+    loadChildren: () => import('./pages/postreportados/postreportados.module').then( m => m.PostreportadosPageModule)
+  },
+  {
+    path: 'comentariosreport',
+    loadChildren: () => import('./pages/comentariosreport/comentariosreport.module').then( m => m.ComentariosreportPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
   },
-
-
-
 
 ];
 

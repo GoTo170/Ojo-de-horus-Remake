@@ -51,5 +51,6 @@
 
   <div class="btns">
     <ion-button fill="outline" color="warning" [routerLink]="['/menu']">Ir al menú</ion-button>
+    <ion-button *ngIf="nickname == 'Diego'" fill="outline" color="warning" [routerLink]="['/administrador']">Administracion</ion-button>
   </div>  
 </ion-content>
