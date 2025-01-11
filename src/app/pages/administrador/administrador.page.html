@@ -5,9 +5,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">administrador</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div>
+    <h1>Usuarios Baneados</h1>
+    <ion-button fill="outline" color="warning" [routerLink]="['/usuariosbaneados']">Aquí</ion-button>
+  </div>
+  
+  <div>
+    <h2>Post Reportados</h2>
+    <ion-button fill="outline" color="warning" [routerLink]="['/postreportados']">Aquí</ion-button>
+  </div>
+  
+  <div>
+    <h3>Comentarios Reportados</h3>
+    <ion-button fill="outline" color="warning" [routerLink]="['/comentariosreport']">Aquí</ion-button>
+  </div>
 </ion-content>
