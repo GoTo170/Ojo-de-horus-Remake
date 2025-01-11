@@ -17,7 +17,7 @@
     <div class="formuser">
       <ion-list>
         <!-- Pregunta de Seguridad -->
-        <ion-item [ngClass]="preguntaSeguridad ? '' : 'campoIncompleto'">
+        <ion-item>
           <ion-label position="floating">Pregunta de Seguridad</ion-label>
           <ion-select [(ngModel)]="preguntaSeguridad" required>
             <ion-select-option value="mascota">¿Cuál es el nombre de tu primera mascota?</ion-select-option>
@@ -27,12 +27,20 @@
             <ion-select-option value="pelicula">¿Cuál es tu película favorita?</ion-select-option>
           </ion-select>
         </ion-item>
+        <!-- Mensaje de error de Pregunta -->
+        <div *ngIf="errores.preguntaSeguridad" class="error-message">
+          <ion-text color="danger">{{ errores.preguntaSeguridad }}</ion-text>
+        </div>
 
         <!-- Respuesta -->
-        <ion-item [ngClass]="respuestaSeguridad ? '' : 'campoIncompleto'">
+        <ion-item>
           <ion-label position="floating">Respuesta</ion-label>
           <ion-input [(ngModel)]="respuestaSeguridad" required></ion-input>
         </ion-item>
+        <!-- Mensaje de error de Respuesta -->
+        <div *ngIf="errores.respuestaSeguridad" class="error-message">
+          <ion-text color="danger">{{ errores.respuestaSeguridad }}</ion-text>
+        </div>
       </ion-list>
 
       <ion-button expand="full" (click)="guardarRespuesta()">Guardar Respuesta</ion-button>
