@@ -1,7 +1,37 @@
+ion-header {
+  background-color: #d4af37; /* Fondo dorado */
+  color: #000000; /* Texto negro */
+
+  ion-toolbar {
+    --background: transparent; /* Fondo transparente del toolbar para heredar el dorado */
+    color: #000; /* Color del texto e iconos dentro del toolbar */
+
+    ion-title,
+    ion-button {
+      color: #000; /* Asegura que el texto e iconos sean negros */
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  }
+}
+
+ion-content {
+  --background: black;
+}
+
 .report-options {
-    padding: 16px;
-  }
-  
-  ion-item {
-    --padding-start: 8px;
-  }
+  padding: 16px;
+}
+
+ion-item {
+  --padding-start: 8px;
+}
+
+.action-buttons {
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+ion-button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}

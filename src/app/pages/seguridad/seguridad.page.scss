@@ -55,6 +55,8 @@ ion-content {
 
 ion-item {
     margin-bottom: 15px;
+    background-color: #000;
+    border: 2px solid #d4af37;
 }
 
 ion-label {
@@ -153,3 +155,15 @@ form {
   color: red;
   text-align: left;
 }
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding-top: 5%;
+}
+
+  .logo-img {
+    width: 150px;
+    height: auto;
+  }
