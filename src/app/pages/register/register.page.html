@@ -7,33 +7,33 @@
 <ion-content [fullscreen]="true">
   <h1>Formulario de Registro</h1>
 
+  <div class="logo-container">
+    <img src="assets/img/ojo de horus.png" alt="Ojo de Horus" class="logo-img">
+  </div>
+
   <div class="formuser">
     <!-- Nickname -->
-    <ion-item>
-      <ion-label position="floating">Ingrese su NickName</ion-label>
-      <ion-input [(ngModel)]="nickname" type="text" [ngClass]="{'error': errores.nickname}"></ion-input>
-    </ion-item>
+    <div>
+      <ion-input label="> Ingrese su NickName" label-placement="floating" [(ngModel)]="nickname" type="text" [ngClass]="{'error': errores.nickname}"></ion-input>
+    </div>
     <div *ngIf="errores.nickname" class="error-message">{{ errores.nickname }}</div>
 
     <!-- Email -->
-    <ion-item>
-      <ion-label position="floating">Ingrese su Correo</ion-label>
-      <ion-input [(ngModel)]="email" type="email" [ngClass]="{'error': errores.email}"></ion-input>
-    </ion-item>
+    <div>
+      <ion-input label="> Ingrese su Correo" label-placement="floating" [(ngModel)]="email" type="email" [ngClass]="{'error': errores.email}"></ion-input>
+    </div>
     <div *ngIf="errores.email" class="error-message">{{ errores.email }}</div>
 
     <!-- Contraseña -->
-    <ion-item>
-      <ion-label position="floating">Ingrese su Contraseña</ion-label>
-      <ion-input [(ngModel)]="clave" type="password" [ngClass]="{'error': errores.clave}"></ion-input>
-    </ion-item>
+    <div>
+      <ion-input label="> Ingrese su Contraseña" label-placement="floating" [(ngModel)]="clave" type="password" [ngClass]="{'error': errores.clave}"></ion-input>
+    </div>
     <div *ngIf="errores.clave" class="error-message">{{ errores.clave }}</div>
 
     <!-- Confirmación de Contraseña -->
-    <ion-item>
-      <ion-label position="floating">Confirme su Contraseña</ion-label>
-      <ion-input [(ngModel)]="cclave" type="password" [ngClass]="{'error': errores.cclave}"></ion-input>
-    </ion-item>
+    <div>
+      <ion-input label="> Confirme su contraseña" label-placement="floating" [(ngModel)]="cclave" type="password" [ngClass]="{'error': errores.cclave}"></ion-input>
+    </div>
     <div *ngIf="errores.cclave" class="error-message">{{ errores.cclave }}</div>
   </div>
 
