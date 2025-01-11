@@ -1,13 +1,54 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> 
+      <ion-back-button></ion-back-button> <!--boton para retroceder-->
+    </ion-buttons>
     <ion-title>comentarios</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">comentarios</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="content" [fullscreen]="true">
+
+  <ion-card class="card-custom">
+    <ion-card-title>
+      <h1>Nombre del usuario</h1>
+    </ion-card-title>
+    <p>Este es un ejemplo de mensaje.</p>
+
+  <ion-card-content>
+    <img src="assets/img/forza.jpg" alt="Publicación de usuario" style="width: 100%; margin-bottom: 8px;">
+    
+    <div class="btnpost">
+      <ion-button fill="outline" color="warning">Me Gusta</ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+
+<h1>Comentarios</h1>
+
+
+<ion-card>
+  <ion-title>Usuario_extra</ion-title>
+  <p>este mensaje es de prueba</p>
+</ion-card>
+
+<ion-card>
+  <ion-title>Usuario_extra2</ion-title>
+  <p>Yo creo sinceramente que estos alumnos se ganaron un 7 profe</p>
+</ion-card>
+
+<ion-card>
+  <ion-title>Usuario_extra3</ion-title>
+  <p>Estoy de acuerdo con el usuario extra 2 profe, 7 y aprueban esta materia</p>
+</ion-card>
+
 </ion-content>
+
+<ion-footer>
+  <ion-item class="com">
+    <ion-input placeholder="Comentario"></ion-input>
+    <ion-button fill="outline" color="warning">Enviar</ion-button>
+  </ion-item>
+</ion-footer>
