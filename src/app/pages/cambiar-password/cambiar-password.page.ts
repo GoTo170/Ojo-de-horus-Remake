@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';  // Importar Router
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -12,12 +13,12 @@ export class CambiarPasswordPage implements OnInit {
   clave: string = '';
   confirmarClave: string = '';
 
-  constructor(private alertController: AlertController) { }
+  constructor(private alertController: AlertController, private router: Router) { }  // Inyectar Router
 
   ngOnInit() {
   }
 
-  cambiarContraseña() {
+  cambiarContrasena() {
     // Verificar si la pregunta de seguridad y las contraseñas son válidas
     if (!this.preguntaSeguridad) {
       alert('La pregunta de seguridad es requerida');
@@ -42,7 +43,11 @@ export class CambiarPasswordPage implements OnInit {
       );
       return;
     }
+
+    // Si todo está correcto, redirigir al login
+    this.router.navigate(['/login']);
   }
+
   async mostrarMensaje() {
     const alert = await this.alertController.create({
       header: 'Próximamente',
