@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seguridad',
@@ -11,6 +12,7 @@ export class SeguridadPage implements OnInit {
   preguntaSeguridad: string = '';
   respuestaSeguridad: string = '';
 
+  // Variables para manejar los errores
   errores: {
     preguntaSeguridad: string | null;
     respuestaSeguridad: string | null;
@@ -19,7 +21,7 @@ export class SeguridadPage implements OnInit {
     respuestaSeguridad: null,
   };
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   // Método para validar los campos y mostrar errores
   validarCampos() {
@@ -43,25 +45,25 @@ export class SeguridadPage implements OnInit {
       this.errores.respuestaSeguridad = null;
     }
 
-    // Si todo es correcto, muestra un mensaje de éxito
-    if (correcto) {
-      alert('Respuesta guardada correctamente');
-    }
+    return correcto;
+  }
+
+  cancelar() {
+    this.router.navigate(['/login']); // Redirigir al login o cualquier otra página que prefieras
   }
 
   ngOnInit() {}
 
   guardarRespuesta() {
-    if (this.preguntaSeguridad && this.respuestaSeguridad.trim()) {
-      // Aquí puedes realizar cualquier acción si los campos están completos.
+    // Limpiar los errores antes de verificar
+    this.errores.preguntaSeguridad = null;
+    this.errores.respuestaSeguridad = null;
+
+    // Validar los campos
+    if (this.validarCampos()) {
+      // Si todo está correcto, puedes proceder con la acción
       console.log('Respuesta guardada correctamente');
-    } else {
-      // Aquí puedes manejar el caso cuando algún campo está vacío,
-      // pero sin mostrar el mensaje de alerta intrusivo.
-      this.errores.preguntaSeguridad =
-        'Debe seleccionar una pregunta de seguridad.';
-      this.errores.respuestaSeguridad =
-        'Debe ingresar la respuesta a la pregunta de seguridad.';
+      this.router.navigate(['/configuraciones']); // Cambiar la ruta según tu flujo
     }
   }
 }
