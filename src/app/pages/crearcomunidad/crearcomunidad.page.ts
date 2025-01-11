@@ -34,6 +34,7 @@ export class CrearcomunidadPage implements OnInit {
     } else {
       this.errores.nombre = null;
     }
+
   }
 
   // Validación del campo "Descripción"

@@ -11,14 +11,14 @@
   <form (submit)="validarFormulario($event)">
     <!-- Campo para el nombre de la comunidad -->
     <ion-item>
-      <ion-input label="Ingrese su NickName" label-placement="floating" type="text" [(ngModel)]="nombreComunidad" name="nombreComunidad" required maxlength="20"
+      <ion-input label="Nombre de la comunidad" label-placement="floating" type="text" [(ngModel)]="nombreComunidad" name="nombreComunidad" required maxlength="20"
         (ngModelChange)="validarNombre()"></ion-input>
     </ion-item>
     <p *ngIf="errores.nombre" style="color: red; font-size: 12px;">{{ errores.nombre }}</p>
 
     <!-- Campo para la descripción -->
     <ion-item>
-      <ion-textarea label="Ingrese su NickName" label-placement="floating" [(ngModel)]="descripcionComunidad" name="descripcionComunidad" required maxlength="250"
+      <ion-textarea label="Descripcion" label-placement="floating" [(ngModel)]="descripcionComunidad" name="descripcionComunidad" required maxlength="250"
         (ngModelChange)="validarDescripcion()"></ion-textarea>
     </ion-item>
     <p style="font-size: 12px;">
