@@ -70,3 +70,19 @@ ion-header {
         text-align: center;
       }
     }
+
+    .btn-3puntos {
+      position: absolute; 
+      top: 8px; 
+      right: 8px; 
+      padding: 0;
+      height: auto;
+      width: auto;
+      
+      img {
+        height: 35px; 
+        width: 35px;
+        border: none; 
+        border-radius: 0; 
+      }
+    }
