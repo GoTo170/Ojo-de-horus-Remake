@@ -32,7 +32,8 @@ h1 {
 
 ion-input {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #d4af37;
+    color: #ffffff;
+    border: 2px solid #d4af37; /* Borde dorado */
 }
 
 ion-button {
@@ -71,14 +72,13 @@ ion-title {
     font-size: 1.3rem; /* Reduje el tamaño de la fuente */
 }
 
-form {
     ion-item {
       --background: transparent; /* Fondo transparente */
       color: #d4af37; /* Color dorado para las etiquetas */
   
       ion-label {
         font-size: 1rem; /* Reduje el tamaño de la fuente */
-        color: #d4af37; /* Etiquetas en dorado */
+        color: white; /* Etiquetas en dorado */
         font-family: Georgia, 'Times New Roman', Times, serif;
       }
   
@@ -99,7 +99,7 @@ form {
         color: #ff0000; /* Color rojo para errores */
       }
     }
-}
+
 
 .welcome-section {
     text-align: center;
@@ -160,7 +160,8 @@ form {
   display: flex;
   justify-content: center;
   background-color: #000;
-  padding-top: 5%;
+  padding-top: 15%;
+  padding-bottom: 5%;
 }
 
   .logo-img {

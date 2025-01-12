@@ -14,40 +14,40 @@
       </ion-toolbar>
     </ion-header>
 
+    <div class="logo-container">
+      <img src="assets/img/ojo de horus.png" alt="Ojo de Horus" class="logo-img">
+    </div>
+
     <div class="formuser">
-      <ion-list>
-        <!-- Pregunta de Seguridad -->
-        <ion-item>
-          <ion-label position="floating">Pregunta de Seguridad</ion-label>
-          <ion-select [(ngModel)]="preguntaSeguridad" [ngModelOptions]="{standalone: true}" required>
-            <ion-select-option value="mascota">¿Cuál es el nombre de tu primera mascota?</ion-select-option>
-            <ion-select-option value="ciudad">¿En qué ciudad naciste?</ion-select-option>
-            <ion-select-option value="comida">¿Cuál es tu comida favorita?</ion-select-option>
-            <ion-select-option value="escuela">¿Cuál fue el nombre de tu escuela primaria?</ion-select-option>
-            <ion-select-option value="pelicula">¿Cuál es tu película favorita?</ion-select-option>
-          </ion-select>
-        </ion-item>
-        <!-- Mensaje de error de Pregunta -->
-        <div *ngIf="errores.preguntaSeguridad" class="error-message">
-          <ion-text color="danger">{{ errores.preguntaSeguridad }}</ion-text>
-        </div>
+      <!-- Pregunta de Seguridad -->
+      <ion-item>
+        <ion-label position="floating">Pregunta de Seguridad</ion-label>
+        <ion-select [(ngModel)]="preguntaSeguridad" [ngModelOptions]="{standalone: true}" required>
+          <ion-select-option value="mascota">¿Cuál es el nombre de tu primera mascota?</ion-select-option>
+          <ion-select-option value="ciudad">¿En qué ciudad naciste?</ion-select-option>
+          <ion-select-option value="comida">¿Cuál es tu comida favorita?</ion-select-option>
+          <ion-select-option value="escuela">¿Cuál fue el nombre de tu escuela primaria?</ion-select-option>
+          <ion-select-option value="pelicula">¿Cuál es tu película favorita?</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- Mensaje de error de Pregunta -->
+      <div *ngIf="errores.preguntaSeguridad" class="error-message">
+        <ion-text color="danger">{{ errores.preguntaSeguridad }}</ion-text>
+      </div>
 
-        <!-- Respuesta -->
-        <ion-item>
-          <ion-label position="floating">Respuesta</ion-label>
-          <ion-input [(ngModel)]="respuestaSeguridad" [ngModelOptions]="{standalone: true}" required></ion-input>
-        </ion-item>
-        <!-- Mensaje de error de Respuesta -->
-        <div *ngIf="errores.respuestaSeguridad" class="error-message">
-          <ion-text color="danger">{{ errores.respuestaSeguridad }}</ion-text>
-        </div>
-      </ion-list>
-
-      <ion-button fill="outline" Color="warning" type="submit">Guardar Respuesta</ion-button>
+      <!-- Respuesta -->
+      <div class="i2">
+        <ion-input label="> Ingrese su respuesta" label-placement="floating" [(ngModel)]="respuestaSeguridad"
+          [ngModelOptions]="{standalone: true}" required></ion-input>
+      </div>
+      <!-- Mensaje de error de Respuesta -->
+      <div *ngIf="errores.respuestaSeguridad" class="error-message">
+        <ion-text color="danger">{{ errores.respuestaSeguridad }}</ion-text>
+      </div>
+      <div class="btns">
+        <ion-button fill="outline" Color="warning" type="submit">Guardar</ion-button>
+        <ion-button fill="outline" color="light" [routerLink]="['/configuraciones']">Cancelar</ion-button>
+      </div>
     </div>
   </form>
-
-  <div class="logo-container">
-    <img src="assets/img/ojo de horus.png" alt="Ojo de Horus" class="logo-img">
-  </div>
 </ion-content>
