@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Editar Comunidad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Editar Nombre y Descripción</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Nombre de la Comunidad</ion-label>
+        <ion-input [(ngModel)]="nombreComunidad"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Descripción</ion-label>
+        <ion-textarea [(ngModel)]="descripcionComunidad"></ion-textarea>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Imagen de la comunidad -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Imagen de la Comunidad</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img [src]="imagenSeleccionada" alt="Imagen de la comunidad"></ion-img>
+      
+      <!-- Botón visual para cambiar la imagen -->
+      <ion-button fill="outline" color="warning" (click)="seleccionarImagen()">Cambiar Imagen</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botones para guardar o cancelar -->
+  <ion-button fill="outline" color="warning" (click)="guardarCambios()">Guardar Cambios</ion-button>
+  <ion-button fill="outline" color="light" (click)="cancelar()">Cancelar</ion-button>
+</ion-content>

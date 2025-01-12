@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-comunidad',
@@ -8,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComunidadPage implements OnInit {
 
-  constructor() { }
+  constructor(private navController: NavController) { }
 
-  //boton para ir e edit perfil
   redirectToPage() {
     console.log('Botón para editar comunidad presionado');
+    this.navController.navigateForward('/editar-com');
   }
 
   ngOnInit() {

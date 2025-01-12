@@ -104,11 +104,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/perfiles/perfiles.module').then( m => m.PerfilesPageModule)
   },
   {
+    path: 'editar-com',
+    loadChildren: () => import('./pages/editar-com/editar-com.module').then( m => m.EditarComPageModule)
+  },
+
+  {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
   },
-
-
 ];
 
 @NgModule({
