@@ -1,13 +1,56 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>comunidad</ion-title>
+    <ion-title>Comunidad</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">comunidad</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Nombre de la comunidad y autor -->
+  <ion-item lines="none">
+    <ion-thumbnail slot="start">
+      <ion-img src="assets/img/ArkLogo.jpg" alt="Logo de Los Pepitos"></ion-img>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>Los Pepitos</h2>
+      <p>Creado por: Gabriel Castillo</p>
+    </ion-label>
+  </ion-item>
+
+  <!-- Descripción breve -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>¡Bienvenidos a Los Pepitos!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Somos una comunidad de jugadores de Ark apasionados por el diseño de bases, defensas y estrategias. Todos son bienvenidos a unirse y compartir sus ideas.
+    </ion-card-content>
+  </ion-card>
+  
+    <!-- Comentario/Post -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Comentario de GamerPro123</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img src="assets/img/ark.jpg" alt="Imagen de la comunidad"></ion-img>
+        "La mejor manera de atacar una base es usar un Quetzal con torretas y un tanque en tierra para distraer. ¡Funciona siempre!"
+      </ion-card-content>
+    </ion-card>
+  
+
+  <!-- Galería de imágenes -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Galería de la comunidad</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img src="assets/img/ark.jpg" alt="Imagen de la comunidad"></ion-img>
+      <ion-img src="assets/img/arkBase.jpg" alt="Imagen de la comunidad"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón para editar comunidad -->
+  <div class="button-container">
+    <ion-button fill="outline" color="warning" (click)="redirectToPage()">Editar Comunidad</ion-button>
+  </div>
 </ion-content>

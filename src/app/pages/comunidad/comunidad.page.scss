@@ -1,0 +1,52 @@
+ion-content {
+    --background: #1b1b1b; /* Fondo claro */
+  }
+  
+  ion-item {
+    ion-thumbnail {
+      border-radius: 50%; /* Hace la imagen circular */
+      overflow: hidden;
+      width: 60px;
+      height: 60px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+  
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
+  }
+  
+  ion-card {
+    margin: 16px;
+    ion-card-title {
+      font-size: 1.2rem;
+      color: #444;
+      text-align: center;
+    }
+  
+    ion-img {
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  
+    ion-button {
+      width: 80%; 
+      height: 50px;
+      font-size: 1rem;
+      font-weight: bold;
+      --border-radius: 10px;
+    }
+  }

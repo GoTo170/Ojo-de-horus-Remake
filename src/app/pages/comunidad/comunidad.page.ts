@@ -10,6 +10,11 @@ export class ComunidadPage implements OnInit {
 
   constructor() { }
 
+  //boton para ir e edit perfil
+  redirectToPage() {
+    console.log('Botón para editar comunidad presionado');
+  }
+
   ngOnInit() {
   }
 
