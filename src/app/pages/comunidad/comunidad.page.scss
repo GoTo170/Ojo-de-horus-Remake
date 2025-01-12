@@ -1,52 +1,89 @@
+/* Fondo negro para la página */
 ion-content {
-    --background: #1b1b1b; /* Fondo claro */
+  --background: #000; 
+  color: #fff; 
+}
+.bordeDorado{
+  border: 2px solid #d4af37; 
+}
+
+/* Estilos para los items (nombre de la comunidad, autor) */
+ion-item {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #000; 
+  border: 2px solid #d4af37; 
+  margin-bottom: 16px; 
+  border-radius: 8px; 
+  padding: 12px;
+}
+
+ion-thumbnail {
+  width: 50px; 
+  height: 50px;
+  border-radius: 8px; 
+}
+
+ion-label {
+  color: #fff; 
+  h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem; 
+    margin: 0;
   }
-  
-  ion-item {
-    ion-thumbnail {
-      border-radius: 50%; /* Hace la imagen circular */
-      overflow: hidden;
-      width: 60px;
-      height: 60px;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #333;
-    }
-  
-    p {
-      font-size: 1rem;
-      color: #666;
-    }
-  }
-  
-  ion-card {
-    margin: 16px;
-    ion-card-title {
-      font-size: 1.2rem;
-      color: #444;
-      text-align: center;
-    }
-  
-    ion-img {
-      margin-top: 10px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-  
-    ion-button {
-      width: 80%; 
-      height: 50px;
-      font-size: 1rem;
-      font-weight: bold;
-      --border-radius: 10px;
-    }
-  }
+  p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem; 
+}
+
+/* Estilos para las tarjetas de descripción, comentarios y galería */
+ion-card {
+  background-color: #000;
+  margin-bottom: 16px; 
+  border-radius: 8px; 
+}
+
+ion-card-header {
+  background-color: #333;
+}
+
+ion-card-title {
+  color: #d4af37; 
+  font-size: 1.1rem;
+}
+.img{  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top:  10px;
+  padding-bottom: 10px;
+}
+/* Ajustes para las imágenes dentro de las tarjetas */
+ion-img {
+
+  max-width: 100%; 
+  border-radius: 8px; 
+  margin: 8px 0; 
+}
+
+/* Estilo para el botón de editar comunidad */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+ion-button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 2px solid #d4af37; 
+  color: #d4af37; 
+  --background: transparent; 
+  --border-radius: 8px; 
+  font-size: 1rem;
+  padding: 12px 24px;
+  text-align: center;
+}
+
+ion-button:hover {
+  --background: #d4af37; 
+  color: #000; 
+}
+}
