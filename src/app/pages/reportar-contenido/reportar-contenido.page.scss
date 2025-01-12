@@ -15,15 +15,29 @@ ion-header {
 }
 
 ion-content {
-  --background: black;
+  --background: none;
+  background-color: black;
 }
 
 .report-options {
   padding: 16px;
 }
 
+ion-list{
+  --background: none;
+  background-color: black
+}
+
+.moti, .moti2{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
 ion-item {
   --padding-start: 8px;
+  --background: none;
+  background-color: black
 }
 
 .action-buttons {

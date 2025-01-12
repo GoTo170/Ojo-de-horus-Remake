@@ -16,13 +16,13 @@
       <ion-radio-group>
         <!-- Lista de 12 motivos -->
         <ion-item *ngFor="let motivo of motivos">
-          <ion-label>{{ motivo }}</ion-label>
+          <ion-label class="moti">{{ motivo }}</ion-label>
           <ion-radio slot="start" [value]="motivo"></ion-radio>
         </ion-item>
         
         <!-- Motivo personalizado -->
         <ion-item>
-          <ion-label>Otro</ion-label>
+          <ion-label class="moti2">Otro</ion-label>
           <ion-radio slot="start" value="otro"></ion-radio>
         </ion-item>
       </ion-radio-group>
