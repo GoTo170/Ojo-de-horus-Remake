@@ -2,10 +2,16 @@ ion-menu{
     background-color: #d4af37c0;
 }
 
+ion-toolbar{
+    --background:none;
+    background-color: #d4af37;
+}
+
 ion-title{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     font-weight: bolder;
+    color: black;
 }
 
 ion-icon{
@@ -39,3 +45,8 @@ ion-list{
     background-color: black;
     padding: 5px;
 }
+
+.i1, .i2, .i3, .i4, .i5, .i6, .i7{
+    margin-bottom: 5%;
+    margin-top: 3%;
+} 
