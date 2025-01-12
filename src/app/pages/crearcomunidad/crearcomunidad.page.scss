@@ -1,54 +1,73 @@
 ion-header {
-  background-color: #d4af37; /* Fondo dorado */
-  color: #000000; /* Texto negro */
+  background-color: #d4af37;
+  /* Fondo dorado */
+  color: #000000;
+  /* Texto negro */
 
   ion-toolbar {
-    --background: transparent; /* Fondo transparente del toolbar para heredar el dorado */
-    color: #000; /* Color del texto e iconos dentro del toolbar */
+    --background: transparent;
+    /* Fondo transparente del toolbar para heredar el dorado */
+    color: #000;
+    /* Color del texto e iconos dentro del toolbar */
 
-    ion-title, ion-buttons, ion-button {
-      color: #000; /* Asegura que el texto e iconos sean negros */
+    ion-title,
+    ion-buttons,
+    ion-button {
+      color: #000;
+      /* Asegura que el texto e iconos sean negros */
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
   }
 }
 
 ion-content {
-  background-color: #000000; /* Fondo negro */
-  color: #ffffff; /* Color blanco para el texto en el contenido */
+  background-color: #000000;
+  /* Fondo negro */
+  color: #ffffff;
+  /* Color blanco para el texto en el contenido */
   font-family: Georgia, 'Times New Roman', Times, serif;
   --background: transparent;
 
   form {
     ion-item {
-      --background: transparent; /* Fondo transparente */
-      color: #d4af37; /* Color dorado para las etiquetas */
+      --background: transparent;
+      /* Fondo transparente */
+      color: #d4af37;
+      /* Color dorado para las etiquetas */
 
       ion-label {
         font-size: 1.1rem;
-        color: #d4af37; /* Etiquetas en dorado */
+        color: #d4af37;
+        /* Etiquetas en dorado */
         font-family: Georgia, 'Times New Roman', Times, serif;
       }
 
-      ion-input, ion-textarea, ion-select {
-        color: #ffffff; /* Texto blanco en los campos */
+      ion-input,
+      ion-textarea,
+      ion-select {
+        color: #ffffff;
+        /* Texto blanco en los campos */
         font-family: Georgia, 'Times New Roman', Times, serif;
       }
     }
 
     p {
       font-size: 0.9rem;
-      color: #d4af37; /* Mensajes en dorado */
+      color: #d4af37;
+      /* Mensajes en dorado */
       font-family: Georgia, 'Times New Roman', Times, serif;
 
       &.error {
-        color: #ff0000; /* Color rojo para errores */
+        color: #ff0000;
+        /* Color rojo para errores */
       }
     }
 
     ion-button {
-      --background: #d4af37; /* Botón dorado */
-      color: #000; /* Texto negro */
+      --background: #d4af37;
+      /* Botón dorado */
+      color: #000;
+      /* Texto negro */
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-weight: bold;
       margin-top: 20px;
@@ -62,15 +81,19 @@ ion-content {
     h1 {
       font-size: 2rem;
       font-weight: bold;
-      color: #d4af37; /* Color dorado para el título */
+      color: #d4af37;
+      /* Color dorado para el título */
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
   }
 
   .about-section {
-    h2, h3 {
+
+    h2,
+    h3 {
       margin-bottom: 15px;
-      color: #d4af37; /* Color dorado */
+      color: #d4af37;
+      /* Color dorado */
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
@@ -83,12 +106,15 @@ ion-content {
       font-size: 1.5rem;
     }
 
-    p, ul {
+    p,
+    ul {
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 15px;
-      color: #fff; /* Color blanco para el texto */
-      border: 5px solid #d4af37; /* Borde dorado */
+      color: #fff;
+      /* Color blanco para el texto */
+      border: 5px solid #d4af37;
+      /* Borde dorado */
     }
 
     ul {
@@ -107,31 +133,31 @@ ion-content {
 
 .img {
   display: flex;
-  align-items: center; 
-  justify-content: flex-start; 
-  
+  align-items: center;
+  justify-content: flex-start;
+
   ion-item {
     --background: transparent;
     display: flex;
-    align-items: center; 
-    padding: 0; 
+    align-items: center;
+    padding: 0;
   }
 
   label {
     display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
-    width: 100%; 
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   img {
     width: 50px;
     height: 50px;
-    margin-right: 10px; 
+    margin-right: 10px;
   }
 
   p {
-    margin: 0; 
-    font-size: 16px; 
+    margin: 0;
+    font-size: 16px;
   }
 }

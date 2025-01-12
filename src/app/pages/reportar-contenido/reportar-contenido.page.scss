@@ -1,14 +1,19 @@
 ion-header {
-  background-color: #d4af37; /* Fondo dorado */
-  color: #000000; /* Texto negro */
+  background-color: #d4af37;
+  /* Fondo dorado */
+  color: #000000;
+  /* Texto negro */
 
   ion-toolbar {
-    --background: transparent; /* Fondo transparente del toolbar para heredar el dorado */
-    color: #000; /* Color del texto e iconos dentro del toolbar */
+    --background: transparent;
+    /* Fondo transparente del toolbar para heredar el dorado */
+    color: #000;
+    /* Color del texto e iconos dentro del toolbar */
 
     ion-title,
     ion-button {
-      color: #000; /* Asegura que el texto e iconos sean negros */
+      color: #000;
+      /* Asegura que el texto e iconos sean negros */
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
   }
@@ -23,12 +28,13 @@ ion-content {
   padding: 16px;
 }
 
-ion-list{
+ion-list {
   --background: none;
   background-color: black
 }
 
-.moti, .moti2{
+.moti,
+.moti2 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bolder;
   font-size: 18px;

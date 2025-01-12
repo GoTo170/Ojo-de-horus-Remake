@@ -1,88 +1,98 @@
 ion-header {
-    background-color: #d4af37; /* Fondo dorado */
-    color: #000000; /* Texto negro */
-  
-    ion-toolbar {
-      --background: transparent; /* Fondo transparente del toolbar para heredar el dorado */
-      color: #000; /* Color del texto e iconos dentro del toolbar */
-  
-      ion-title,
-      ion-button {
-        color: #000; /* Asegura que el texto e iconos sean negros */
-        font-family: Georgia, 'Times New Roman', Times, serif;
-      }
-      }
-    }
+  background-color: #d4af37;
+  /* Fondo dorado */
+  color: #000000;
+  /* Texto negro */
 
-.content{
-    background-color: black;
+  ion-toolbar {
     --background: transparent;
+    /* Fondo transparente del toolbar para heredar el dorado */
+    color: #000;
+    /* Color del texto e iconos dentro del toolbar */
+
+    ion-title,
+    ion-button {
+      color: #000;
+      /* Asegura que el texto e iconos sean negros */
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  }
 }
 
-h1{
-    font-size: 20px;
-    padding-left: 3%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.content {
+  background-color: black;
+  --background: transparent;
 }
 
-ion-title{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding-top: 10px;
-    color: #d4af37;
-    margin-right: 20%;
+h1 {
+  font-size: 20px;
+  padding-left: 3%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-p{
-    padding-left: 3%;
-    color: white;
-    font-size: 18px;
+
+ion-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-top: 10px;
+  color: #d4af37;
+  margin-right: 20%;
+}
+
+p {
+  padding-left: 3%;
+  color: white;
+  font-size: 18px;
 }
 
 .card-custom {
-    border: 2px solid #d4af37; /* Borde dorado */
-    border-radius: 10px; /* Bordes redondeados */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #000;
+  border: 2px solid #d4af37;
+  /* Borde dorado */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #000;
 }
 
 ion-card-title {
-    color: #d4af37; /* Texto dorado para el título */
-    margin-right: 20%;
-  }
+  color: #d4af37;
+  /* Texto dorado para el título */
+  margin-right: 20%;
+}
 
-  ion-card{
-    background-color: #000;
-        border-radius: 10px;
-    border: 2px solid #d4af37; /* Borde dorado en imágenes */
-  }
+ion-card {
+  background-color: #000;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
+  /* Borde dorado en imágenes */
+}
 
 .btn-3puntos {
-    position: absolute; 
-    top: 8px; 
-    right: 8px; 
-    padding: 0;
-    height: auto;
-    width: auto;
-    margin-bottom: 10%;
-    
-    img {
-      height: 25px; 
-      width: 25px;
-      border: none; 
-      border-radius: 0; 
-    }
-  }
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  height: auto;
+  width: auto;
+  margin-bottom: 10%;
 
-  .com{
-    font-size: 20px;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    border: 2px solid #d4af37; /* Borde dorado en imágenes */
+  img {
+    height: 25px;
+    width: 25px;
+    border: none;
+    border-radius: 0;
   }
+}
 
-  .tucom{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
-    --background: transparent;
-    background-color: black;
-  }
+.com {
+  font-size: 20px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
+  /* Borde dorado en imágenes */
+}
 
+.tucom {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  --background: transparent;
+  background-color: black;
+}

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button> 
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Inicio</ion-title>
     <ion-button slot=end color="dark" [routerLink]="['/login']">Cerrar sesión</ion-button>
@@ -14,8 +14,7 @@
     <h1>¡Bienvenido {{ nickname }}!</h1>
   </div>
 
-  <img src="assets/img/menu-logo.jpg"
-    alt="Portada de bienvenida" class="welcome-image">
+  <img src="assets/img/menu-logo.jpg" alt="Portada de bienvenida" class="welcome-image">
 
   <!-- Sección "Sobre nosotros" -->
   <div class="about-section">
@@ -32,12 +31,12 @@
     </p>
 
     <h3>¿Qué Ofrecemos?</h3>
-    
-      <p>Foros Activos: Participa en conversaciones sobre tácticas, jugadores, y eventos recientes.
+
+    <p>Foros Activos: Participa en conversaciones sobre tácticas, jugadores, y eventos recientes.
       Noticias y Actualizaciones: Mantente al tanto de las últimas noticias y actualizaciones.
       Recursos y Guías: Accede a guías útiles, trucos y estrategias para mejorar tu juego.
       Eventos y Torneos: Únete a nuestros eventos y torneos para competir con otros entusiastas.</p>
-    
+
 
     <p>
       Tu voz y tus ideas son importantes para nosotros. En Ojo de horus, cada miembro tiene la oportunidad de
@@ -51,6 +50,7 @@
 
   <div class="btns">
     <ion-button fill="outline" color="warning" [routerLink]="['/menu']">Ir al menú</ion-button>
-    <ion-button *ngIf="nickname == 'Diego'" fill="outline" color="warning" [routerLink]="['/administrador']">Administracion</ion-button>
-  </div>  
+    <ion-button *ngIf="nickname == 'Diego'" fill="outline" color="warning"
+      [routerLink]="['/administrador']">Administracion</ion-button>
+  </div>
 </ion-content>

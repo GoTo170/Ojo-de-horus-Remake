@@ -18,17 +18,5 @@ export class EditarComPage implements OnInit {
     this.imagenSeleccionada = 'assets/img/ArkLogo.jpg';  
   } 
 
-  guardarCambios() {
-    console.log('Cambios guardados:', {
-      nombre: this.nombreComunidad,
-      descripcion: this.descripcionComunidad,
-      imagen: this.imagenSeleccionada,
-    });
-  }
-
-  cancelar() {
-    console.log('Edición cancelada');
-  }
-
   ngOnInit() { }
 }

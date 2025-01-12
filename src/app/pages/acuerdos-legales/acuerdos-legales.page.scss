@@ -1,71 +1,81 @@
 ion-header {
-    background-color: black; /* Fondo negro para el encabezado */
-    ion-toolbar {
-      background-color: #d4af37; /* Asegurando que la barra de herramientas sea negra */
-      --background: transparent;
-      
-      ion-title {
+  background-color: black;
+
+  /* Fondo negro para el encabezado */
+  ion-toolbar {
+    background-color: #d4af37;
+    /* Asegurando que la barra de herramientas sea negra */
+    --background: transparent;
+
+    ion-title {
+      color: black;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    ion-buttons {
+      ion-menu-button {
         color: black;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-  
-      }
-  
-      ion-buttons {
-        ion-menu-button,
-        ion-back-button {
-          color: rgb(0, 0, 0); /* Color dorado para los botones de menú y retroceso */
-        }
       }
     }
   }
-  
-  ion-content {
-    background-color: black; /* Fondo negro */
-   
-  
-    .legal-card {
-      margin: 15px;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 7px 9px rgb(245, 200, 0);
-      background-color: black;
-  
-      ion-card-header {
-        background-color: #d4af37 /* Color del encabezado de la tarjeta */
-      }
-  
-      ion-card-title {
-        color: rgb(0, 0, 0); /* Títulos dorados */
-        font-family: Georgia, 'Times New Roman', Times, serif;
-      }
-  
-      ion-card-content {
-        color: white; /* Texto blanco */
-        font-family: Georgia, 'Times New Roman', Times, serif;
-  
-        .legal-text {
-          p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-  
-            strong {
-              color: var(--highlight-color, #d4af37); /* Color dorado para el texto destacado */
-              display: block;
-              margin-bottom: 5px;
-            }
+}
+
+
+ion-content {
+  --background: none;
+  background-color: black;
+  /* Fondo negro */
+
+
+  .legal-card {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 7px 9px rgb(245, 200, 0);
+    background-color: black;
+
+    ion-card-title {
+      color: #d4af37;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+      font-weight: bolder;
+    }
+
+    .conte {
+      color: white;
+      /* Texto blanco */
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+      .legal-text {
+        p {
+          margin-bottom: 15px;
+          line-height: 1.6;
+          font-size: 17px;
+
+          strong {
+            color: #d4af37;
+            /* Color dorado para el texto destacado */
+            display: block;
+            margin-bottom: 5px;
           }
         }
       }
     }
-  
-    .custom-header {
-      background-color: black; /* Fondo negro para el encabezado */
-      ion-toolbar {
-        color: #d4af37; /* Color dorado para el texto del toolbar */
-        ion-title {
-          color: #d4af37; /* Títulos dorados */
-        }
+  }
+
+  .custom-header {
+    background-color: black;
+
+    /* Fondo negro para el encabezado */
+    ion-toolbar {
+      color: #d4af37;
+
+      /* Color dorado para el texto del toolbar */
+      ion-title {
+        color: #d4af37;
+        /* Títulos dorados */
       }
     }
   }
-  
+}

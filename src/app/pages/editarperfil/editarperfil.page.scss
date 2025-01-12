@@ -1,21 +1,30 @@
 ion-header {
-  background-color: #d4af37; 
-  color: #000000; 
+  background-color: #d4af37;
+  color: #000000;
 
   ion-toolbar {
-    --background: transparent; 
-    color: #000; 
+    --background: transparent;
+    color: #000;
 
     ion-title,
     ion-button {
-      color: #000; 
+      color: #000;
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
   }
 }
 
 ion-content {
-  --background: black; 
+  --background: black;
+  background-color: black;
+}
+
+ion-card-content {
+  background-color: black;
+}
+
+ion-item {
+  --background: none;
   background-color: black;
 }
 
@@ -25,41 +34,58 @@ h1 {
   text-align: center;
   padding-top: 5%;
   font-size: 40px;
-  color: #d4af37; 
+  color: #d4af37;
+}
+
+.content-wrapper {
+  padding: 2%;
 }
 
 /* Contenedor para la foto de perfil o logo */
 .perfil-container {
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  flex-direction: column; /* Coloca los elementos en columna */
-  margin-top: 20px; /* Espaciado superior */
+  justify-content: center;
+  /* Centra el contenido horizontalmente */
+  align-items: center;
+  /* Centra el contenido verticalmente */
+  flex-direction: column;
+  /* Coloca los elementos en columna */
+  margin-top: 20px;
+  /* Espaciado superior */
 }
 
 .foto {
-  font-size: 100px; /* Tamaño del icono */
-  width: 100px; /* Ancho del icono */
-  height: 100px; /* Altura del icono */
-  color: white; /* Color del icono */
-  display: flex; /* Flexbox para centrar el contenido */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  border-radius: 50%; /* Hace que el fondo sea redondeado */
-  background-color: #333; /* Fondo oscuro */
+  font-size: 100px;
+  /* Tamaño del icono */
+  width: 100px;
+  /* Ancho del icono */
+  height: 100px;
+  /* Altura del icono */
+  color: white;
+  /* Color del icono */
+  display: flex;
+  /* Flexbox para centrar el contenido */
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  border-radius: 50%;
+  /* Hace que el fondo sea redondeado */
+  background-color: #333;
+  /* Fondo oscuro */
   margin: 20px;
   margin-left: 38%;
 }
 
 /* Estilo de nombres y títulos */
-.nombre{
+.nombre {
   text-align: center;
   font-size: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: black;
 }
 
-.cabe{
+.cabe {
   --background: none;
   background-color: #d4af37;
 }
@@ -67,7 +93,7 @@ h1 {
 /* Contenedor de formularios */
 .formuser {
   text-align: center;
-  padding: 5% 15%; 
+  padding: 5% 15%;
   margin-bottom: 10px;
 }
 
@@ -95,16 +121,17 @@ p.error {
   padding-top: 10px;
 
   ion-button {
-    margin: 5px; 
+    margin: 5px;
   }
 }
 
 /* Tarjeta de perfil */
 .cardperfil {
-  border: 2px solid #d4af37; 
+  background-color: black;
+  border: 2px solid #d4af37;
   border-radius: 10px;
-  margin: 10px auto; 
-  padding: 20px; 
+  margin: 10px auto;
+  padding: 10px;
 }
 
 /* Encabezado de tarjetas */
@@ -127,4 +154,8 @@ ion-card-header {
 .d4 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
+}
+
+ion-button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }

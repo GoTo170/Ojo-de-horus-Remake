@@ -1,5 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Comunidad</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,6 +18,12 @@
       <h2>Los Pepitos</h2>
       <p>Creado por: Gabriel Castillo</p>
     </ion-label>
+
+    <div class="button-container">
+      <ion-button fill="outline" color="warning" (click)="redirectToPage()">
+        <ion-icon color="black" name="pencil"></ion-icon>
+      </ion-button>
+    </div>
   </ion-item>
 
   <!-- Descripción breve -->
@@ -22,21 +32,10 @@
       <ion-card-title>¡Bienvenidos a Los Pepitos!</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Somos una comunidad de jugadores de Ark apasionados por el diseño de bases, defensas y estrategias. Todos son bienvenidos a unirse y compartir sus ideas.
+      Somos una comunidad de jugadores de Ark apasionados por el diseño de bases, defensas y estrategias. Todos son
+      bienvenidos a unirse y compartir sus ideas.
     </ion-card-content>
   </ion-card>
-  
-    <!-- Comentario/Post -->
-    <ion-card class="bordeDorado">
-      <ion-card-header>
-        <ion-card-title>Comentario de GamerPro123</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-img src="assets/img/ark.jpg" alt="Imagen de la comunidad"></ion-img>
-        "La mejor manera de atacar una base es usar un Quetzal con torretas y un tanque en tierra para distraer. ¡Funciona siempre!"
-      </ion-card-content>
-    </ion-card>
-  
 
   <!-- Galería de imágenes -->
   <ion-card class="bordeDorado">
@@ -49,8 +48,24 @@
     </ion-card-content>
   </ion-card>
 
+  <h1>Contenido</h1>
+  <!-- Comentario/Post -->
+  <ion-card class="bordeDorado">
+    <ion-card-header>
+      <ion-card-title>GamerPro123</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img src="assets/img/ark.jpg" alt="Imagen de la comunidad"></ion-img>
+      "La mejor manera de atacar una base es usar un Quetzal con torretas y un tanque en tierra para distraer. ¡Funciona
+      siempre!"
+    </ion-card-content>
+
+    <div class="btns">
+      <ion-button fill="outline" color="warning">Me Gusta</ion-button>
+      <ion-button fill="outline" color="warning" [routerLink]="['/comentarios']">Comentar</ion-button>
+    </div>
+  </ion-card>
+
   <!-- Botón para editar comunidad -->
-  <div class="button-container">
-    <ion-button fill="outline" color="warning" (click)="redirectToPage()">Editar Comunidad</ion-button>
-  </div>
+
 </ion-content>

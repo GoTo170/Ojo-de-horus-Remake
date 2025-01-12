@@ -4,16 +4,22 @@ ion-toolbar {
   color: #000;
 }
 
-ion-content {
-  background-color: #000; // Fondo negro
-  --background: transparent;
+.pous {
+  --background: none;
+  background-color: black;
 
   .content-wrapper {
-    margin: 15px; /* Espaciado externo */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 8px; /* Esquinas redondeadas */
-    box-shadow: 0 7px 9px rgb(245, 200, 0); /* Sombra dorada */
-    background-color: black; /* Fondo gris oscuro para destacar */
+    margin: 15px;
+    /* Espaciado externo */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: 8px;
+    /* Esquinas redondeadas */
+    box-shadow: 0 7px 9px rgb(245, 200, 0);
+    /* Sombra dorada */
+    --background: none;
+    background-color: black;
+    /* Fondo gris oscuro para destacar */
   }
 
   h2 {
@@ -21,6 +27,7 @@ ion-content {
     font-weight: bold;
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #d4af37;
   }
 
   p {
@@ -44,7 +51,7 @@ ion-content {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
-  p + h3 {
+  p+h3 {
     margin-top: 30px;
     padding-top: 10px;
     border-top: 1px solid #ddd; // Línea divisoria
