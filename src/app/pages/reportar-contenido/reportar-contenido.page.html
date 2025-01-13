@@ -13,7 +13,7 @@
 
   <div class="report-options">
     <ion-list>
-      <ion-radio-group>
+      <ion-radio-group [(ngModel)]="selectedMotivo">
         <!-- Lista de 12 motivos -->
         <ion-item *ngFor="let motivo of motivos">
           <ion-label class="moti">{{ motivo }}</ion-label>

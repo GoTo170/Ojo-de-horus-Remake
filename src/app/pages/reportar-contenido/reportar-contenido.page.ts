@@ -27,12 +27,12 @@ export class ReportarContenidoPage implements OnInit {
 
   selectedMotivo: string = '';
 
-  constructor(private alertController: AlertController, private router: Router,private navCtrl: NavController) {}
+  constructor(private alertController: AlertController, private router: Router, private navCtrl: NavController) {}
 
   ngOnInit() {}
 
   async enviarReporte() {
-    if (this.selectedMotivo) {
+    if (!this.selectedMotivo) {
       await this.presentAlert('Error', 'Por favor selecciona un motivo para el reporte.');
       return;
     }
@@ -43,6 +43,7 @@ export class ReportarContenidoPage implements OnInit {
     // Redirigir a la página de inicio
     this.router.navigate(['/inicio']);
   }
+
   cancelarReporte() {
     this.navCtrl.back();
   }
