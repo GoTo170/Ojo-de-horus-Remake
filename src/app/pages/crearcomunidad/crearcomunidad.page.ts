@@ -8,14 +8,17 @@ import { Router } from '@angular/router';
   standalone: false,
 })
 export class CrearcomunidadPage implements OnInit {
-
   // Variables para los campos del formulario
   nombreComunidad: string = '';
   descripcionComunidad: string = '';
   categoriasSeleccionadas: string[] = [];
 
   // Objeto para almacenar errores de validación
-  errores: { nombre: string | null; descripcion: string | null; categorias: string | null } = {
+  errores: {
+    nombre: string | null;
+    descripcion: string | null;
+    categorias: string | null;
+  } = {
     nombre: null,
     descripcion: null,
     categorias: null,
@@ -38,10 +41,14 @@ export class CrearcomunidadPage implements OnInit {
 
   // Validación del campo "Descripción"
   validarDescripcion() {
-    if (!this.descripcionComunidad || this.descripcionComunidad.trim().length < 1) {
+    if (
+      !this.descripcionComunidad ||
+      this.descripcionComunidad.trim().length < 1
+    ) {
       this.errores.descripcion = 'La descripción no puede estar vacía.';
     } else if (this.descripcionComunidad.length > 250) {
-      this.errores.descripcion = 'La descripción no puede superar los 250 caracteres.';
+      this.errores.descripcion =
+        'La descripción no puede superar los 250 caracteres.';
     } else {
       this.errores.descripcion = null;
     }
@@ -71,7 +78,11 @@ export class CrearcomunidadPage implements OnInit {
     this.validarCategorias();
 
     // Si hay errores, no se procesa el formulario
-    if (this.errores.nombre || this.errores.descripcion || this.errores.categorias) {
+    if (
+      this.errores.nombre ||
+      this.errores.descripcion ||
+      this.errores.categorias
+    ) {
       return;
     }
 
@@ -88,6 +99,10 @@ export class CrearcomunidadPage implements OnInit {
 
   // Verificar si el formulario es válido
   formValido(): boolean {
-    return !(this.errores.nombre || this.errores.descripcion || this.errores.categorias);
+    return !(
+      this.errores.nombre ||
+      this.errores.descripcion ||
+      this.errores.categorias
+    );
   }
 }
