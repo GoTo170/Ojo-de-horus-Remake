@@ -32,7 +32,7 @@
       </ion-item>
       <!-- Mensaje de error de Pregunta -->
       <div *ngIf="errores.preguntaSeguridad" class="error-message">
-        <ion-text color="danger">{{ errores.preguntaSeguridad }}</ion-text>
+        <ion-text >{{ errores.preguntaSeguridad }}</ion-text>
       </div>
 
       <!-- Respuesta -->
@@ -42,7 +42,7 @@
       </div>
       <!-- Mensaje de error de Respuesta -->
       <div *ngIf="errores.respuestaSeguridad" class="error-message">
-        <ion-text color="danger">{{ errores.respuestaSeguridad }}</ion-text>
+        <ion-text >{{ errores.respuestaSeguridad }}</ion-text>
       </div>
       <div class="btns">
         <ion-button fill="outline" Color="warning" type="submit">Guardar</ion-button>
