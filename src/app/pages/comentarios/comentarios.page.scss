@@ -13,7 +13,6 @@ ion-header {
     ion-title,
     ion-button {
       color: #000;
-      /* Asegura que el texto e iconos sean negros */
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
   }
@@ -41,6 +40,7 @@ p {
   padding-left: 3%;
   color: white;
   font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .card-custom {
@@ -82,17 +82,31 @@ ion-card {
   }
 }
 
+.foot {
+  background-color: black;
+  --background: none;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 .com {
-  font-size: 20px;
-  margin-bottom: 5px;
-  border-radius: 10px;
-  border: 2px solid #d4af37;
-  /* Borde dorado en imágenes */
+  display: flex; /* Activa el diseño flexbox */
+  align-items: center; /* Alinea verticalmente el input y el botón */
+  justify-content: space-between; /* Distribuye el espacio: input a la izquierda, botón a la derecha */
+  gap: 10px; /* Espacio entre el input y el botón */
 }
 
 .tucom {
+  flex: 1; /* El input ocupará todo el espacio disponible */
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: white;
-  --background: transparent;
   background-color: black;
+  border: 2px solid #d4af37; /* Borde dorado */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px;
+}
+
+.btn-enviar {
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 8px 16px; /* Tamaño del botón */
 }
