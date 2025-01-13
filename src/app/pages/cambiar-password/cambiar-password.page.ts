@@ -12,9 +12,8 @@ export class CambiarPasswordPage implements OnInit {
   preguntaSeguridad: string = '';
   clave: string = '';
   confirmarClave: string = '';
-  respuestaSeguridad: string = '';  
+  respuestaSeguridad: string = '';
 
-  // Objeto para manejar los mensajes de error
   errores: { preguntaSeguridad: string | null; clave: string | null; confirmarClave: string | null; respuestaSeguridad: string | null } = {
     preguntaSeguridad: null,
     clave: null,
