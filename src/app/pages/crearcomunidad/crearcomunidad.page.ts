@@ -83,7 +83,7 @@ export class CrearcomunidadPage implements OnInit {
     });
 
     // Redirigir a la página de comunidades si todo es válido
-    this.router.navigate(['/comunidades']);
+    this.router.navigate(['/comunidad']);
   }
 
   // Verificar si el formulario es válido
