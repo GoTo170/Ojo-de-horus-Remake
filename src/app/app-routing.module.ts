@@ -107,11 +107,7 @@ const routes: Routes = [
     path: 'editar-com',
     loadChildren: () => import('./pages/editar-com/editar-com.module').then(m => m.EditarComPageModule)
   },
-
   {
-    path: '**',
-    loadChildren: () => import('./pages/notfound/notfound.module').then(m => m.NotfoundPageModule)
-  },  {
     path: 'camara',
     loadChildren: () => import('./pages/camara/camara.module').then( m => m.CamaraPageModule)
   },
@@ -119,7 +115,10 @@ const routes: Routes = [
     path: 'desbanearusuarios',
     loadChildren: () => import('./pages/desbanearusuarios/desbanearusuarios.module').then( m => m.DesbanearusuariosPageModule)
   },
-
+  {
+    path: '**',
+    loadChildren: () => import('./pages/notfound/notfound.module').then(m => m.NotfoundPageModule)
+  },
 ];
 
 @NgModule({
