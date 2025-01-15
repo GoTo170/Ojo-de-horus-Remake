@@ -111,7 +111,15 @@ const routes: Routes = [
   {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then(m => m.NotfoundPageModule)
+  },  {
+    path: 'camara',
+    loadChildren: () => import('./pages/camara/camara.module').then( m => m.CamaraPageModule)
   },
+  {
+    path: 'desbanearusuarios',
+    loadChildren: () => import('./pages/desbanearusuarios/desbanearusuarios.module').then( m => m.DesbanearusuariosPageModule)
+  },
+
 ];
 
 @NgModule({
