@@ -47,9 +47,15 @@ ion-header {
       text-align: center;
     }
 
+    strong{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #d4af37;
+    }
+    
     p {
       line-height: 1.6;
       margin-bottom: 15px;
+      color: white;
     }
 
     h3 {
@@ -73,6 +79,7 @@ ion-header {
 
       li {
         margin-bottom: 10px;
+        color: white;
       }
     }
 
